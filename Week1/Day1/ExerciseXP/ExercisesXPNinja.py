@@ -28,7 +28,6 @@ esse cillum dolore eu fugiat nulla pariatur.
 Excepteur sint occaecat cupidatat non proident,
 sunt in culpa qui officia deserunt mollit anim id est laborum."""
 
-print(my_text)
 print(len(my_text))
 
 # Exercise 5: Longest Word without a Specific Character
@@ -38,6 +37,7 @@ longest = ""
 while True:
     sentence = input("Please type the longest sentence you can. If you would like to quit, simply type 'quit': ")
     if sentence.upper() == "QUIT":
+        print("You have quit the challenge.")
         break
     if "A" in sentence.upper():
         print("Your sentence has the letter A")
