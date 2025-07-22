@@ -25,7 +25,7 @@ print(f"I have a {computer_brand} computer")
 name = "Niv"
 age = 30
 shoe_size = 43
-info = f"Hello, my name is {name}. I am {age} years old and I have a shoe size of {shoe_size}"
+info = f"Hello, my name is {name}. I am {age} years old and I have a shoe size of {shoe_size}."
 print(info)
 
 # Exercise 6: A & B
