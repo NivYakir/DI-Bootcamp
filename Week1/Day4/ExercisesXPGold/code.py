@@ -84,18 +84,19 @@ win_count = 0
 loss_count = 0
 
 while True:
-    user_input = input("Please enter a number between 1 and 9 (inclusive): ")
+    user_input = input("Enter a number between 1 and 9 (inclusive): ")
     rand_num = random.randint(1,9)
-    if user_input.upper() == 'QUIT':
-        print(f"You have won a total of {win_count} games! \nYou have lost a total of {loss_count} games!")
+    if user_input.lower() == "quit":
+        print(f"You have won {win_count} time(s)")
+        print(f"You have lost {loss_count} time(s)")
         break
+    elif int(user_input) not in range(1,10):
+        print("You have entered an invalid number!")
     else:
-        user_num = int(user_input)
-        if user_num < 1 or user_num > 9:
-            print("The number you chose isn't valid")
-        elif user_num == rand_num:
+        user_input = int(user_input)
+        if user_input == rand_num:
             print("Winner!")
             win_count += 1
         else:
-            print(f"The correct number was {rand_num}. Better luck next time!")
+            print(f"The number was {rand_num}. Better luck next time!")
             loss_count += 1
