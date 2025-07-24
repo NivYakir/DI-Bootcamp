@@ -33,3 +33,12 @@ for i, fruit in enumerate(fruits):
         print(f"Fruit {i} is {fruit}") # Fruit 0 is 'apple'
                                        # Fruit 1 is 'banana'
 print(fruits)
+
+# game example
+
+#flag
+winner = False
+
+while not winner:
+    position = input("enter a position between 1 to 9: ")
+    

@@ -29,12 +29,8 @@ num_1 = int(input("Please input the first number: "))
 num_2 = int(input("Please input the second number: "))
 num_3 = int(input("Please input the third number: "))
 
-if num_1 > num_2 and num_1 > num_3:
-    print(f"the greatest number is: {num_1}")
-elif num_2 > num_1 and num_2 > num_3:
-    print(f"the greatest number is: {num_2}")
-else:
-    print(f"the greatest number is: {num_3}")
+all_num = [num_1, num_2, num_3]
+print(max(all_num))
 
 # Exercise 5: The Alphabet
 

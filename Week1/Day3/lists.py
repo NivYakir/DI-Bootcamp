@@ -61,3 +61,10 @@ if 20 in list1:
     index_20 = list1.index(20)
     list1[index_20] = 200
 print(list1)
+
+# While Loops
+
+i = 0
+while i < len(fruits):
+    print(i)
+    i += 1
