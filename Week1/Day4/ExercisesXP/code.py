@@ -16,10 +16,10 @@ print(our_fav_numbers)
 
 my_tuple = (1,2,3,4)
 # my_tuple.append(5)
-
 print(my_tuple) # Error: cannot add elements to a tuple
 
 # Exercise 3: List Manipulation
+
 basket = ['Banana','Apples','Oranges','Blueberries']
 
 basket.remove('Banana')
@@ -82,7 +82,7 @@ while True:
         toppings.append(topping)
         print(f"Adding {topping} to your pizza")
         cost += 2.5
-print(f"Your Toppings: {toppings}\n" f"Total Cost: ${cost}")
+print(f"Your Toppings: {toppings}\n Total Cost: ${cost}")
 
 # Exercise 9: Cinemax Tickets
 
@@ -101,11 +101,14 @@ print(f"Your total cost is ${total_cost}")
 
 # Bonus:
 
-age_input = input("Please enter the age of each person, separated by a space: ")
-teens_list = age_input.split()
-teens_list = [int(age) for age in teens_list]
-teens_list = [age for age in teens_list if 16 <= age <= 21]
-print(teens_list)
+attendees = []
+while True:
+    age_input = int(input("Please enter your age: "))
+    if age_input == 0:
+        break
+    elif age_input >= 16 and age_input <= 21:
+        attendees.append(age_input)
+print(attendees)
 
 # Exercise 10: Sandwich Orders
 
