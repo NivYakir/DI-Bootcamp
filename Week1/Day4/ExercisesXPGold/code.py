@@ -1,3 +1,5 @@
+import random
+
 # Exercise 1: Concatenate Lists
 
 list_a = [1,2,3,4]
@@ -23,3 +25,77 @@ for index, name in enumerate(names):
 
 # Exercise 4: Greatest Number
 
+num_1 = int(input("Please input the first number: "))
+num_2 = int(input("Please input the second number: "))
+num_3 = int(input("Please input the third number: "))
+
+if num_1 > num_2 and num_1 > num_3:
+    print(f"the greatest number is: {num_1}")
+elif num_2 > num_1 and num_2 > num_3:
+    print(f"the greatest number is: {num_2}")
+else:
+    print(f"the greatest number is: {num_3}")
+
+# Exercise 5: The Alphabet
+
+alphabet = 'abcdefghijklmnopqrstuvwxyz'
+for letter in alphabet:
+    if letter in ['a','e','i','o','u']:
+        print(f"{letter} is a vowel")
+    else:
+        print(f"{letter} is a consonant")
+
+# Exercise 6: Words and Letters
+
+word_input = input("Please enter 7 words separated by a space: ")
+words = word_input.split()
+
+if len(words) != 7:
+    print("You need to enter exactly 7 words!")
+else:
+    letter = input("Please enter a letter from the english alphabet: ")
+
+    for word in words:
+        if letter in word:
+            index = word.find(letter)
+            print(index)
+        else:
+            print(f"Unfortunately, the letter '{letter}' does not appear in the word {word}")
+
+# Exercise 7: Min, Max, Sum
+
+num_list = []
+for num in range(1, 1000001):
+    num_list.append(int(num))
+print(min(num_list))
+print(max(num_list))
+print(sum(num_list))
+
+# Exercise 8: List and Tuple
+
+num_input = input("Please enter a sequence of numbers, separated by a comma: ")
+nums = num_input.split(',')
+print(list(nums))
+print(tuple(nums))
+
+# Exercise 9: Random Number
+
+win_count = 0
+loss_count = 0
+
+while True:
+    user_input = input("Please enter a number between 1 and 9 (inclusive): ")
+    rand_num = random.randint(1,9)
+    if user_input.upper() == 'QUIT':
+        print(f"You have won a total of {win_count} games! \nYou have lost a total of {loss_count} games!")
+        break
+    else:
+        user_num = int(user_input)
+        if user_num < 1 or user_num > 9:
+            print("The number you chose isn't valid")
+        elif user_num == rand_num:
+            print("Winner!")
+            win_count += 1
+        else:
+            print(f"The correct number was {rand_num}. Better luck next time!")
+            loss_count += 1
