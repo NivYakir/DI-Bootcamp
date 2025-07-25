@@ -145,3 +145,4 @@ user_input = "New to Python or choosing between Python 2 and Python 3? Read Pyth
 words = user_input.split()
 for word in set(words):
     print(f"{word} : {words.count(word)}")
+
