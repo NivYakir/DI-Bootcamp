@@ -12,11 +12,10 @@ print(my_list)
 
 # Challenge 2: Remove Consecutive Duplicate Letters
 
-my_string = list(input("Please enter a string of your choice:\n"))
-dup_check = []
+my_string = input("Please enter a string: ")
+result = ""
 
-for char in my_string:
-    if char not in dup_check:
-        dup_check.append(char)
-result = ''.join(dup_check)
+for i in range(len(my_string)):
+    if i == 0 or my_string[i] != my_string[i - 1]:
+        result += my_string[i]
 print(result)
