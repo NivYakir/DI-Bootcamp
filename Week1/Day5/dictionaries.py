@@ -100,3 +100,35 @@ topics = ['Math', 'Grammar', 'History', 'Sport']
 grades = [85, 90, 100, 75, 87, 55, 25]
 
 print(dict(zip(topics, grades)))
+
+
+# # Exercise 2:
+
+# family = {}
+# total_cost = 0
+# while True:
+#     user_input = input("Please enter (name/age) of family member, or type 'quit' if you are finished.\n")
+#     if user_input.lower() == 'quit':
+#         break
+#     else:
+#         name, age = user_input.split('/')
+#         age = int(age)
+#         family.update({name : age})
+#         if age < 3:
+#             print(f"{name}'s ticket cost is FREE")
+#         elif age >= 3 and age <= 12:
+#             print(f"{name}'s ticket cost is $10")
+#             total_cost += 10
+#         else:
+#             print(f"{name}'s ticket cost is $15")
+#             total_cost += 15
+# print(f"The total cost is ${total_cost}")
+
+my_string = input("Enter a string\n")
+result = ''
+
+for i in range(len(my_string)):
+    if i == 0 or my_string[i] != my_string[i - 1]:
+        result += my_string[i]
+print(result)
+
