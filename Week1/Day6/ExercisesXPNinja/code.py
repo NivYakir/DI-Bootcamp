@@ -1,6 +1,6 @@
 # Exercise 1: Cars
 # 1
-my_string = "Volkswagen, Tayata, Foird Motor, Hinda, Chevrolet"
+my_string = "Volkswagen, Toyota, Ford Motor, Honda, Chevrolet"
 
 # 2
 my_list = my_string.split(', ')

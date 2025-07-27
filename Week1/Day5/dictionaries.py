@@ -145,16 +145,61 @@
 #         my_dict[letter].append(index)
 # print(my_dict)
 
-# Daily Challenge 2
-items_purchase = {"Apple": "$4", "Honey": "$3", "Fan": "$14", "Bananas": "$4", "Pan": "$100", "Spoon": "$2"}
-wallet = "$100"
-my_money = int(wallet.replace("$",""))
-result = []
+# # Daily Challenge 2
+# items_purchase = {"Apple": "$4", "Honey": "$3", "Fan": "$14", "Bananas": "$4", "Pan": "$100", "Spoon": "$2"}
+# wallet = "$100"
+# my_money = int(wallet.replace("$",""))
+# result = []
 
-for key in items_purchase.keys():
-    cleaned = int(items_purchase[key].replace("$","").replace(",",""))
-    items_purchase[key] = cleaned
-    if my_money > cleaned:
-        result.append(key)
+# for key in items_purchase.keys():
+#     cleaned = int(items_purchase[key].replace("$","").replace(",",""))
+#     items_purchase[key] = cleaned
+#     if my_money > cleaned:
+#         result.append(key)
 
-print(sorted(result))
+# print(sorted(result))
+
+# #1
+# keys = ['Ten', 'Twenty', 'Thirty']
+# values = [10, 20, 30]
+
+# print(dict(zip(keys,values)))
+
+# # 2
+# family = {"rick": 43, 'beth': 13, 'morty': 5, 'summer': 8}
+# total_cost = 0
+
+# for name, age in family.items():
+#     if age in range(0,2):
+#         print(f"{name}'s ticket is FREE")
+#     elif age in range(3,12):
+#         print(f"{name}'s ticket is $10.")
+#         total_cost += 10
+#     else:
+#         print(f"{name}'s ticket is $15.")
+#         total_cost += 15
+
+# # print(f"Total Cost: ${total_cost}")
+
+# # Timed Challenge 1:
+
+# user_input = input(f"Please enter a sentence:\n").replace(".","")
+# reversed = user_input.split(' ')[::-1]
+
+# print(*reversed)
+
+# Timed Challenge 2
+
+x = int(input("Enter a number:\n"))
+temp = []
+
+for mod_check in range(1, x):
+    if x % mod_check == 0:
+        temp.append(mod_check)
+
+check = sum(temp)
+
+if x == check:
+    print(True)
+else:
+    print(False)
