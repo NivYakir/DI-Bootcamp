@@ -131,3 +131,30 @@
 #     if i == 0 or my_string[i] != my_string[i - 1]:
 #         result += my_string[i]
 # print(result)
+
+
+# # Daily Challenge 1
+
+# my_string = input(f"Enter a string:\n")
+# my_dict = {}
+
+# for index, letter in enumerate(my_string):
+#     if letter not in my_dict.keys():
+#         my_dict[letter] = [index]
+#     else:
+#         my_dict[letter].append(index)
+# print(my_dict)
+
+# Daily Challenge 2
+items_purchase = {"Apple": "$4", "Honey": "$3", "Fan": "$14", "Bananas": "$4", "Pan": "$100", "Spoon": "$2"}
+wallet = "$100"
+my_money = int(wallet.replace("$",""))
+result = []
+
+for key in items_purchase.keys():
+    cleaned = int(items_purchase[key].replace("$","").replace(",",""))
+    items_purchase[key] = cleaned
+    if my_money > cleaned:
+        result.append(key)
+
+print(sorted(result))

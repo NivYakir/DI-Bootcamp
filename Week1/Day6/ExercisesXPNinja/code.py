@@ -1,6 +1,6 @@
 # Exercise 1: Cars
 # 1
-my_string = "Volkswagen, Tayata, Ford Motor, Hinda, Chevrolet"
+my_string = "Volkswagen, Tayata, Foird Motor, Hinda, Chevrolet"
 
 # 2
 my_list = my_string.split(', ')
@@ -18,8 +18,10 @@ no_i_count = 0
 for company in my_list:
     if 'o' in company.lower():
         o_count += 1
-    elif 'i' not in company.lower():
+        pass
+    elif 'i' not in company.lower() and 'o' not in company.lower():
         no_i_count += 1
+        pass
     else:
         continue
 

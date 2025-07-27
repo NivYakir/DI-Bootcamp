@@ -13,16 +13,15 @@ print(my_dict)
 
 # Challenge 2: Affordable Items
 
-items_purchase = {"Apple": "$4", "Honey": "$3", "Fan": "$14", "Bananas": "$4", "Pan": "$100", "Spoon": "$2"}
-wallet = "$100"
-my_money = int(wallet.replace('$',''))
+items_purchase = {"Water": "$1", "Bread": "$3", "TV": "$1,000", "Fertilizer": "$20"}
+wallet = "$300"
+my_amount = int(wallet.replace('$',''))
 result = []
-for key, value in items_purchase.items():
-    new_price = int(value.replace("$","").replace(",",""))
-    items_purchase[key] = new_price
-    if my_money >  new_price:
-        result.append(key)
-    else:
-        continue
 
+for item in items_purchase.keys():
+    clean_price = int(items_purchase[item].replace("$","").replace(",",""))
+    items_purchase[item] = clean_price 
+    if my_amount > clean_price:
+        result.append(item)
 print(sorted(result))
+
