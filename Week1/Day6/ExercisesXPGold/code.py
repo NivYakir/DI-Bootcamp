@@ -1,35 +1,36 @@
 # Exercise 1: Birthday Lookup
 
-birthdays = {}
-
-while len(birthdays) != 5:
-    name_input = input(f"Please enter a name:\n")
-    date_input = input(f"Please enter their birthday using YYYY/MM/DD format:\n")
-    birthdays.update({name_input : date_input})
-
-print("Welcome! You can look up the birthdays of the people in the list!")
-print(list(birthdays.keys()))
+birthday = {}
+while len(birthday) != 5:
+    name_input = input(f"Enter the person's name:\n")
+    date_input = input(f"Enter the person's birthday using YYYY/MM/DD format:\n")
+    birthday.update({name_input : date_input})
+print("Welcome! You can look up the birthdays of the people in the list below!")
+print(list(birthday.keys()))
 while True:
-    person = input(f"Enter a name to find out their birthday or type 'quit' if you are finished.\n")
-    birthdate = birthdays[name_input]
-    if person == 'quit':
+    user_input = input("Enter a name to find out their birthday or type 'done' if you are finished:\n")
+    if user_input.lower() == 'done':
         break
-    elif person in birthdays.keys():
-        print(f"{person} was born on {birthdate}")
+    if user_input.lower() not in birthday.keys():
+        print(f"Sorry, we don't have the birthday information for {user_input}")
     else:
-        print(f"This person is not on the list!")
+        print(f"{user_input}'s birthday is {birthday[user_input]}!")
 
-# Exercise 4: Fruit Shop
+# Exercise 2: Fruit Shop
 items = {
     "banana": 4,
     "apple": 2,
     "orange": 1.5,
     "pear": 3
 }
+# 1
+for fruit, price in items.items():
+    if fruit[0] in ['a','e','i','o','u']:
+        print(f"An {fruit} costs ${price}")
+    else:
+        print(f"A {fruit} costs ${price}")
 
-for fruit,price in items.items():
-    print(f"A {fruit} costs ${price}")
-
+# 2
 items = {
     "banana": {"price": 4 , "stock":10},
     "apple": {"price": 2, "stock":5},
@@ -38,8 +39,7 @@ items = {
 }
 
 total_cost = 0
-for fruit in items.keys():
-    cost = items[fruit]['price'] * items[fruit]['stock']
-    total_cost += cost
 
-print(f"The total cost is ${total_cost}")
+for fruit in items.keys():
+    total_cost += (items[fruit]['price'] * items[fruit]['stock'])
+print(total_cost)
