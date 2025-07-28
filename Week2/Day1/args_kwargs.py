@@ -21,3 +21,11 @@ def user_info(**kwargs):
           print(value)
 
 user_info(name = 'Juliana', email = 'juliana@gmail.com', age = 30, is_online = True, pets = ['cat', 'dog'])
+
+# my_list = [[1,2],[3,4],[5,6],[7,8],[9,10]]
+# my_listv2 = [[1,2],[3,4],[5,6],[7,8],[9,10]]
+
+# def show_me(**args):
+#     print(args)
+
+# show_me(list1=my_list,list_2=my_listv2)
