@@ -1,37 +1,37 @@
 import random
 
-# Exercise 1: When Will I Retire?
+# # Exercise 1: When Will I Retire?
 
-def get_age(year, month, day):
-    current_year = 2025
-    current_month = 7
-    current_day = 28
-    age = current_year - year
-    if (current_month, current_day) < (month, day):
-        age -= 1
-    return age
+# def get_age(year, month, day):
+#     current_year = 2025
+#     current_month = 7
+#     current_day = 28
+#     age = current_year - year
+#     if (current_month, current_day) < (month, day):
+#         age -= 1
+#     return age
 
-def can_retire(gender, date_of_birth):
-    year, month, day = date_of_birth.split('/')
-    year, month, day = int(year), int(month), int(day)
-    my_age = get_age(year, month, day)
-    if gender == 'f':
-        if my_age >= 62:
-            print("You can retire!")
-            return True
-        else:
-            print("You can't retire.")
-    elif gender == 'm':
-        if my_age >= 67:
-            print("You can retire!")
-            return True
-        else:
-            print("You can't retire.")
-            return False
-    else:
-        print("Please enter 'm or f'")
+# def can_retire(gender, date_of_birth):
+#     year, month, day = date_of_birth.split('/')
+#     year, month, day = int(year), int(month), int(day)
+#     my_age = get_age(year, month, day)
+#     if gender == 'f':
+#         if my_age >= 62:
+#             print("You can retire!")
+#             return True
+#         else:
+#             print("You can't retire.")
+#     elif gender == 'm':
+#         if my_age >= 67:
+#             print("You can retire!")
+#             return True
+#         else:
+#             print("You can't retire.")
+#             return False
+#     else:
+#         print("Please enter 'm or f'")
 
-can_retire('f','1967/10/12')
+# can_retire('f','1967/10/12')
 
 # Exercise 2: Sum
 
@@ -46,36 +46,37 @@ def get_sum(x):
 
 print(get_sum('3'))
 
-# Exercise 3: Double Dice
+# # Exercise 3: Double Dice
 
-def throw_dice():
-    '''Returns a number between 1 and 6'''
-    return random.randint(1,6)
+# def throw_dice():
+#     '''Returns a number between 1 and 6'''
+#     return random.randint(1,6)
 
-def throw_until_double():
-    '''Returns the number of attempts it took to roll a double'''
-    roll_count = 0
-    while True:
-        roll_1 = throw_dice()
-        roll_2 = throw_dice()
-        roll_count += 1
-        if roll_1 == roll_2:
-            break
-    return roll_count
+# def throw_until_double():
+#     '''Returns the number of attempts it took to roll a double'''
+#     roll_count = 0
+#     while True:
+#         roll_1 = throw_dice()
+#         roll_2 = throw_dice()
+#         roll_count += 1
+#         if roll_1 == roll_2:
+#             break
+#     return roll_count
 
-def main():
-    '''Returns the number and avg number of attempts it took reach 100 doubles'''
-    result = {}
-    total_throws = 0
-    for i in range(100):
-        roll = throw_dice()
-        total_throws += roll
-        result.update({i : roll})
-    print(f"Total Throws: {total_throws}")
-    print(f"Average Throws to Reach Double: {round((total_throws / 100), 2)}")
-    return result
+# def main():
+#     '''Returns the number and avg number of attempts it took reach 100 doubles'''
+#     result = {}
+#     total_throws = 0
+#     for i in range(100):
+#         rolls = throw_until_double()
+#         total_throws += rolls
+#         result.update({i : rolls})
+#     print(result)
+#     print(f"Total Throws: {total_throws}")
+#     print(f"Average Throws to Reach Double: {round((total_throws / 100), 2)}")
+#     return result
 
-main()
+# main()
 
 # Exercise 2 (dynamix solution)
 
@@ -91,3 +92,29 @@ def get_sum():
     return sum(result)
 
 print(get_sum())
+
+# Exercise 3 (Cleaner Version)
+
+def throw_dice():
+    '''Returns a number between 1 and 6'''
+    return random.randint(1,6)
+
+def throw_until_doubles():
+    counter = 0
+    while True:
+        roll_1 = throw_dice()
+        roll_2 = throw_dice()
+        counter += 1
+        if roll_1 == roll_2:
+            break
+    return counter
+
+def main():
+    result = []
+    for _ in range(100):
+        result.append(throw_until_doubles())
+    print(f"Total Throws: {sum(result)}")
+    print(f"Average Number of Throws: {((sum(result)/100))}")
+    return sum(result)
+
+main()
