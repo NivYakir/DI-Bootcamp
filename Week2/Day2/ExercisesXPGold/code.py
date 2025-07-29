@@ -11,9 +11,7 @@ def get_age(year, month, day):
 
 def can_retire(gender, date_of_birth):
     year, month, day = date_of_birth.split('/')
-    year = int(year)
-    month = int(year)
-    day = int(year)
+    year, month, day = int(year), int(month), int(day)
     my_age = get_age(year, month, day)
     if gender == 'f':
         if my_age >= 62:
@@ -32,3 +30,16 @@ def can_retire(gender, date_of_birth):
         print("Please enter 'm or f'")
 
 can_retire('f','1967/10/12')
+
+# Exercise 2: Sum
+
+def get_sum(x):
+    result = []
+    for num in range(1, 5):
+        my_str = ""
+        my_str += x*num
+        my_num = int(my_str)
+        result.append(my_num)
+    return sum(result)
+
+print(get_sum('2'))
