@@ -1,16 +1,18 @@
 # Exercise 1: Solve the Matrix
 import re
 
-MATRIX_STR = '''7iiTsxh%?i #sM $a #t%'''
+MATRIX_STR = '''7ii
+Tsx
+h%?
+i #
+sM 
+$a 
+#t%'''
+
 
 def string_to_2D(text):
-    result = []
-    for i in range(0,len(text),3):
-        result.append(text[i:i + 3])
+    result = text.split('\n')
     return result
-
-matrix = string_to_2D(MATRIX_STR)
-print(matrix)
 
 def filter():
     matrix = string_to_2D(MATRIX_STR)
