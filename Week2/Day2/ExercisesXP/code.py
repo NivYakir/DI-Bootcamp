@@ -39,7 +39,7 @@ def random_number(num) -> str:
     else:
         print("Invalid Number")
 
-random_number(10)
+random_number(12)
 
 # Exercise 5: Let's Create Some Personalized Shirts
 
@@ -92,7 +92,7 @@ def get_random_temp() -> float:
         temp = random.uniform(30, 40)
     elif month > 8 and month <= 11:
         temp = random.uniform(10, 30)
-    elif month == 12 or month == 1 or month == 2:
+    elif month <= 2 or month == 12:
         temp = random.uniform(-10, 10)
     else:
         print("Invalid Month")
@@ -100,6 +100,7 @@ def get_random_temp() -> float:
     return rounded
 
 def main():
+    '''Prints a word of advice depending on the temperature'''
     my_temp = get_random_temp()
     print(f"The tempurature right now is {my_temp} degrees Celcius.")
     if my_temp < 0:
