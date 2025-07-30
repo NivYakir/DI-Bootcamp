@@ -1,5 +1,4 @@
 # Exercise 1: Solve the Matrix
-import re
 
 MATRIX_STR = '''7ii
 Tsx
@@ -10,26 +9,43 @@ $a
 #t%'''
 
 def string_to_2D(text):
-    result = text.split('\n')
+    '''Converts a string to a 2D Matrix'''
+    result = []
+    temp = text.split('\n')
+    for rows in temp:
+        row = []
+        for char in rows:
+            row.append(char)
+        result.append(row)
     return result
 
-def filter():
-    matrix = string_to_2D(MATRIX_STR)
-    for _ in range(len(matrix)):
-        collumn = 0
-        result = ''
-        while collumn != 3:
-            for ele in matrix:
-                letter = ele[collumn]
-                result += letter
-            collumn += 1
-        
-    cleaned = re.sub(
-    r'(?<=[A-Za-z])[^A-Za-z]+(?=[A-Za-z])'  # junk between letters
-    r'|^[^A-Za-z]+'                         # junk at the start
-    r'|[^A-Za-z]+$',                        # junk at the end
-    ' ',result).strip()
+matrix = string_to_2D(MATRIX_STR)
 
-    return cleaned
+# matrix = [[char for char in row] for row in MATRIX_STR.split('\n')]
 
-print(filter())
+def matrix_decoder():
+    row_num = len(matrix)
+    col_num = len(matrix[0])
+    result = ''
+    for col in range(col_num):
+        for row in range(row_num):
+            char = matrix[row][col]
+            result += char
+    return result
+
+def text_clean():
+    uncleaned = matrix_decoder()
+    result = ''
+
+    for i, char in enumerate(uncleaned):
+        if i == 0:
+            if char.isalpha():
+                result += char
+        elif char.isalpha():
+            result += char
+        elif (char.isalpha() == False) and (uncleaned[i - 1].isalpha() == True):
+            result += ' '
+    
+    return result.strip()
+
+print(text_clean())

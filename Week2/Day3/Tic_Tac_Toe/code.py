@@ -1,12 +1,5 @@
 # Tic-Tac-Toe
 
-board = [
-    [' ', ' ', ' '],
-    [' ', ' ', ' '],
-    [' ', ' ', ' '],
-]
-
-
 def display_board():
     '''Displays the current state of the gameboard'''
     print(f"  {board[0][0]}  |  {board[0][1]}  |  {board[0][2]}  ")
@@ -68,6 +61,8 @@ def check_tie(board):
 
 def play():
     '''Play a game of Tic-Tac-Toe with a friend'''
+    global board 
+    board = [[' ' for cells in range(3)] for cells in range(3)]
     player = 1
     while True:
         display_board()
