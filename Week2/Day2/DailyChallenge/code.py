@@ -9,7 +9,6 @@ sM
 $a 
 #t%'''
 
-
 def string_to_2D(text):
     result = text.split('\n')
     return result

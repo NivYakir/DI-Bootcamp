@@ -37,27 +37,37 @@ import random
 
 # print(get_sum('3'))
 
-# Exercise 2: Double Dice
+# # Exercise 2: Double Dice
 
-def throw_dice():
-    '''Returns a number between 1 and 6'''
-    return random.randint(1,6)
+# def throw_dice():
+#     '''Returns a number between 1 and 6'''
+#     return random.randint(1,6)
 
-def throw_until_doubles():
-    counter = 0
-    while True:
-        roll_1 = throw_dice()
-        roll_2 = throw_dice()
-        counter += 1
-        if roll_1 == roll_2:
-            break
-    return counter
+# def throw_until_doubles():
+#     counter = 0
+#     while True:
+#         roll_1 = throw_dice()
+#         roll_2 = throw_dice()
+#         counter += 1
+#         if roll_1 == roll_2:
+#             break
+#     return counter
 
-def main():
-    result = []
-    for _ in range(100):
-        result.append(throw_until_doubles())
-    print(result)
-    return sum(result)
+# def main():
+#     result = []
+#     for _ in range(100):
+#         result.append(throw_until_doubles())
+#     print(result)
+#     return sum(result)
 
-print(main())
+# print(main())
+
+my_string = input(f"Enter a string:\n")
+result = {}
+for i, char in enumerate(my_string):
+    if char not in result.keys():
+        result.update({char : [i]})
+    else:
+        result[char].append(i)
+
+print(result)
