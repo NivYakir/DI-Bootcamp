@@ -9,7 +9,7 @@ def display_board():
     print(f"  {board[2][0]}  |  {board[2][1]}  |  {board[2][2]}  ")
 
 
-def player_input(player=1):
+def player_input(player):
     '''Inserts the players mark to the position on the board'''
     position_map = {
     1: (0, 0), 2: (0, 1), 3: (0, 2),
@@ -35,7 +35,7 @@ def player_input(player=1):
             print(f"You must enter a valid number.")
 
 
-def check_win(board, player=1):
+def check_win(board, player):
     '''Checks if the current player has 3 in-a-row'''
     for i in range(3):
         if board[i][0] == board[i][1] == board[i][2] != ' ':
@@ -67,7 +67,7 @@ def play():
     while True:
         display_board()
         player_input(player)
-        if check_win(board) == True:
+        if check_win(board,player) == True:
             print(f"Player {player} wins!")
             display_board()
             break
