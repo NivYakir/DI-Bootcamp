@@ -95,21 +95,34 @@
 
 # print(string_to_matrix(MATRIX_STR))
 
-def matrix_decode():
-    result = ''
-    matrix = string_to_matrix(MATRIX_STR)
-    rows = len(matrix)
-    columns = len(matrix[0])
+# def matrix_decode():
+#     result = ''
+#     matrix = string_to_matrix(MATRIX_STR)
+#     rows = len(matrix)
+#     columns = len(matrix[0])
 
-    for c in range(columns):
-        for r in range(rows):
-            letter = matrix[r][c]
-            if letter.isalpha() == True:
-                result += letter
-    print(result)
+#     for c in range(columns):
+#         for r in range(rows):
+#             letter = matrix[r][c]
+#             if letter.isalpha() == True:
+#                 result += letter
+#     print(result)
 
-matrix_decode()
+# matrix_decode()
 
-board = [[" " for cells in range(3)] for cells in range(3)]
+# board = [[" " for cells in range(3)] for cells in range(3)]
 
-print(board)
+# print(board)
+
+
+
+
+
+my_word = 'python'
+my_board = ['*' for char in my_word]
+user_input = 't'
+
+for i in range(len(my_board)):
+    if user_input == my_word[i]:
+        my_board[i] = user_input
+print(my_board)
