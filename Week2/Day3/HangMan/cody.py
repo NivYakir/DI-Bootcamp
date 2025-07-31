@@ -1,17 +1,20 @@
 import random
 
-def random_word():
+def random_word() -> str:
     '''Returns a random word from a list'''
     wordslist = ['correction', 'childish', 'beach', 'python', 'assertive', 'interference', 'complete', 'share', 'credit card', 'rush', 'south']
     return random.choice(wordslist)
 
-def create_board(word):
+def create_board(word) -> list:
+    '''Creates a board from the randomly generated word'''
     return ['*' for char in word]
 
 def display_board(board):
+    '''Displays the current status of the board'''
     print(f"Board Status: {board}")
 
-def letter_check(board,word,guessed_letters):
+def letter_check(board,word,guessed_letters) -> bool:
+    '''Asks the user for a letter and puts it on the board if the letter is in the word.'''
     while True:
         user_input = input("Guess a letter: ").lower()
         print(user_input)
@@ -99,6 +102,7 @@ def win_check(board):
 
 
 def main():
+    '''Play a game of hangman.'''
     word = random_word()
     board = create_board(word)
     guessed_letters = []
