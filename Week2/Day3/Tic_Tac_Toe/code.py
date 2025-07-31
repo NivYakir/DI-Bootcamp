@@ -18,7 +18,7 @@ def player_input(player):
 }
     while True:
         try:
-            position = int(input(f"Player {player}: Select your position (1 - 9):\n"))
+            position = int(input(f"Player {player}: Select your position (1 - 9): "))
             if position in range(1,10):
                 row, column = position_map[position]
                 if board[row][column] == ' ':
@@ -37,15 +37,20 @@ def player_input(player):
 
 def check_win(board, player):
     '''Checks if the current player has 3 in-a-row'''
+    # Check columns/rows for a match
     for i in range(3):
         if board[i][0] == board[i][1] == board[i][2] != ' ':
             return True
         elif board[0][i] == board[1][i] == board[2][i] != ' ':
             return True
+        
+    # Check diagonals for a match
     if board[0][0] == board[1][1] == board[2][2] != ' ':
         return True
     elif board[0][2] == board[1][1] == board[2][0] != ' ':
         return True
+    
+    # If there are no diagonal or row/column matches
     else:
         return False
 
