@@ -28,8 +28,6 @@ def space_count(my_sent):
     return counter
 
 # 3
-my_string = 'Good Day Sir. How Are You today'
-
 def char_count(my_string):
     lower = 0
     upper = 0
@@ -42,7 +40,7 @@ def char_count(my_string):
     print(f"Lower: {lower}\nUpper: {upper}")
 
 # 4
-array = [4,4,2]
+# array = [4,4,2]
 
 def my_sum(nums):
     total = 0
@@ -89,7 +87,74 @@ def l2_norm(array):
         list_sum += num_sqaured
     return int(math.sqrt(list_sum))
 
-print(l2_norm(array))
+# 10
+my_list = ['a',101,2,'there',5,'was',10,12,'continuous','traffic']
 
-# 9
+def get_longest(word_list):
+    longest = ''
+    for word in word_list:
+        if len(word) > len(longest):
+            longest = word     
+    print(longest)
+
+# 11
+
+def separate(a_list):
+    num_list = []
+    str_list = []
+    for item in a_list:
+        if type(item) == int:
+            num_list.append(item)
+        else:
+            str_list.append(item)
+    return num_list, str_list
+
+# 12
+
+my_string = 'titties'
+
+def is_palindrome(word):
+    if word == word[::-1]:
+        return True
+    else:
+        return False
+    
+# 13
+my_sentence = 'today there was a big ass bird outside and it made me cry'
+
+def sum_over_k(k, sentence):
+    temp = sentence.split(" ")
+    counter = 0
+    for word in temp:
+        if len(word) >= k:
+            counter += 1
+    return counter
+
+# 14
+my_dict = {'a': 8,'b':8,'c':8,'d': 8}
+
+def dict_avg(dict):
+    temp = 0
+    for num in my_dict.values():
+        temp += num
+    result = temp / len(dict)
+    return result
+
+# 15
+
+def com_divs(num1,num2):
+    result = []
+    my_num = 0
+    if num1 < num2:
+        my_num = num1
+    else:
+        my_num = num2
+    
+    for num in range(2,my_num + 1):
+        if round(my_num/num) == my_num/num:
+    #   if num1 % num == 0 and num2 % num == 0: <-- (better version)
+            result.append(num)
+    return result
+
+# 16
 

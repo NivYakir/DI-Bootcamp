@@ -219,19 +219,36 @@
 
 # print(win_check(board))
 
-player = 2
+# player = 2
 
-def true_or_false():
-    if player == 1:
-        return True
-    else:
-        return False
+# def true_or_false():
+#     if player == 1:
+#         return True
+#     else:
+#         return False
     
 
-attempt = 0
-while attempt != 6:
-    if true_or_false == True:
-        print('Okay')
-    else:
-        print('Not okay')
-        attempt += 1
+# attempt = 0
+# while attempt != 6:
+#     if true_or_false == True:
+#         print('Okay')
+#     else:
+#         print('Not okay')
+#         attempt += 1
+
+
+
+board = [[" " for row in range(3)] for cell in range(3)]
+print(board)
+
+for i in range(3):
+    if board[i][0] == board[i][1] == board[i][2] != " " :
+        print("True")
+    elif board[0][i] == board[1][i] == board[2][i] != " ":
+        print("True")
+if board[0][0] == board[1][1] == board[2,2] != " " :
+    print("True")
+elif board[0][2] == board[1][1] == board[2][0] != " " :
+    print("True")
+else:
+    print("false")
