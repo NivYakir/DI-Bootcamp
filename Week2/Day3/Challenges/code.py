@@ -60,10 +60,8 @@ def get_max(nums):
 # 6
 def factorial(num):
     result = 1
-    counter = num
-    while counter != 0:
-        result *= counter
-        counter -= 1
+    for i in range(2, num + 1):
+        result *= i
     return result
 
 # 7
@@ -82,10 +80,10 @@ def get_count(list=my_list, check=12):
 def l2_norm(array):
     list_sum = 0
     for num in array:
-        num_sqaured = 0
-        num_sqaured = num ** 2
-        list_sum += num_sqaured
+        list_sum += (num ** 2)
     return int(math.sqrt(list_sum))
+
+print(l2_norm([1,2,2]))
 
 # 10
 my_list = ['a',101,2,'there',5,'was',10,12,'continuous','traffic']
@@ -212,6 +210,3 @@ my_pass = 'password123'
 def password(password):
     result = ''.join('*' for char in password)
     return result
-
-print(password(my_pass))
-

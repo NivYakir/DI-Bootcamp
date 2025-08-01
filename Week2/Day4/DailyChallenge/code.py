@@ -20,4 +20,3 @@ def longest_word(sentence):
         if len(word) > len(longest):
             longest = word
     return longest
-
