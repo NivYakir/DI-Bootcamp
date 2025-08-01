@@ -4,10 +4,10 @@ def sort_string():
     my_string = input("Enter a string of words, where each word is separated by a comma:\n")
     temp = my_string.split(',')
     sorted_list = sorted(temp)
-    result = ''
-    for item in sorted_list:
-        result += (item + ',')
-    return result[:-1]
+    result = ', '.join(sorted_list)
+    return result
+
+print(sort_string())
 
 # Challenge 2: 
 
@@ -20,3 +20,4 @@ def longest_word(sentence):
         if len(word) > len(longest):
             longest = word
     return longest
+
