@@ -120,7 +120,6 @@ def is_palindrome(word):
         return False
     
 # 13
-my_sentence = 'today there was a big ass bird outside and it made me cry'
 
 def sum_over_k(k, sentence):
     temp = sentence.split(" ")
@@ -141,7 +140,6 @@ def dict_avg(dict):
     return result
 
 # 15
-
 def com_divs(num1,num2):
     result = []
     my_num = 0
@@ -157,4 +155,63 @@ def com_divs(num1,num2):
     return result
 
 # 16
+def is_prime(num):
+    for n in range(2, num):
+        if num % n == 0:
+            return False
+    return True
+
+# 17
+my_nums = [1,2,2,3,4,5]
+
+def even_nums(numlist):
+    result = []
+    for i, num in enumerate(numlist):
+        if i % 2 == 0 and num % 2 == 0:
+            result.append(num)
+    return result
+
+# 18
+
+def type_count(**kwargs):
+    int_count = 0
+    str_count = 0
+    float_count = 0
+    bool_count = 0
+    for t in kwargs.values():
+        if type(t) == int:
+            int_count += 1
+        elif type(t) == str:
+            str_count += 1
+        elif type(t) == float:
+            float_count += 1
+        else:
+            bool_count +=1
+
+    return f"int: {int_count}, str: {str_count}, float: {float_count}, bool: {bool_count}"
+
+# 19
+my_sentence = 'today/there/was/a/big/ass/bird/outside/and/it made/me cry   '
+
+def splitter(text, char=' '):
+    result = []
+    temp = ''
+    for letter in text:
+        if letter != char:
+            temp += letter
+        else:
+            result.append(temp)
+            temp = ''
+    if text[-1] != char:
+        result.append(temp)
+    return result
+
+# 20
+my_pass = 'password123'
+
+def password(password):
+    result = ''.join('*' for char in password)
+    return result
+
+print(password(my_pass))
 
