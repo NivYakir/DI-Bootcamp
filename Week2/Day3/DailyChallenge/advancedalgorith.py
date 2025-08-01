@@ -22,7 +22,8 @@ for number in list_of_numbers:
         # Sort the pair to avoid (a,b) and (b,a) duplicates
         pair = tuple(sorted((number, complement)))
         pairs.add(pair)
-    seen.add(number)
+    else: 
+        seen.add(number)
 
 # Print the results
 for a, b in pairs:
