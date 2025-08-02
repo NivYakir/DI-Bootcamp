@@ -210,12 +210,3 @@ my_pass = 'password123'
 def password(password):
     result = ''.join('*' for char in password)
     return result
-
-
-# List Comprehension Practice
-
-# a
-my_list = [(i ** 2) for i in range(9)]
-
-# b
-

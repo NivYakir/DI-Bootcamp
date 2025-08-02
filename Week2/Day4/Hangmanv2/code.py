@@ -109,5 +109,4 @@ def hangman():
         player_input(word, board, guessed_letters)
 
 
-
 hangman()
