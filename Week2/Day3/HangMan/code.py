@@ -2,7 +2,20 @@ import random
 
 def random_word() -> str:
     '''Returns a random word from a list'''
-    wordslist = ['correction', 'childish', 'beach', 'python', 'assertive', 'interference', 'complete', 'share', 'credit card', 'rush', 'south']
+    wordslist = [
+    "apple", "banana", "cherry", "date", "elderberry", "fig", "grape", "honeydew",
+    "iguana", "jungle", "kangaroo", "lemon", "mango", "nectarine", "orange", "papaya",
+    "quartz", "raspberry", "strawberry", "tangerine", "umbrella", "violet", "watermelon",
+    "xylophone", "yogurt", "zebra", "amazing", "brave", "calm", "daring", "eager",
+    "friendly", "gentle", "happy", "intelligent", "jolly", "kind", "lively", "mighty",
+    "nice", "obedient", "polite", "quick", "respectful", "strong", "thoughtful", "useful",
+    "vast", "wise", "xenial", "young", "zealous", "climb", "draw", "eat", "fly", "grow",
+    "help", "imagine", "jump", "kick", "laugh", "move", "nod", "open", "play", "question",
+    "run", "sleep", "talk", "understand", "visit", "walk", "x-ray", "yawn", "zoom",
+    "book", "cloud", "dream", "energy", "fire", "garden", "hill", "island", "jewel",
+    "key", "light", "mountain", "night", "ocean", "path", "quiet", "rain", "sun", "tree",
+    "universe", "valley", "wind", "xenon", "yard", "zone","xenomorph","geography",
+    ]
     return random.choice(wordslist)
 
 def create_board(word) -> list:
@@ -23,7 +36,7 @@ def letter_check(board,word,guessed_letters) -> bool:
                 print("You have already guessed this letter")
             else: 
                 if user_input in word:
-                    for i in range(len(board)):
+                    for i in range(len(word)):
                         if user_input == word[i]:
                             board[i] = user_input
                             if user_input not in guessed_letters:
