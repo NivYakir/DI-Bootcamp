@@ -265,13 +265,39 @@
 
 
 
-my_list = ['Apples','Ananas','Cherry','Banana','Cucumber','Almonds','Pear','Mango','Berries','Strawberry','Cashew']
-result = {}
+# my_array = [7,6,5,5,2,0]
 
 
-for item in my_list:
-    if item[0].upper() not in result.keys():
-        result[item[0]] = [item]
-    else:
-        result[item[0]].append(item)
+# def is_mono(array):
+#     asc_count = 1
+#     dsc_count = 1
+#     for i in range(1, len(array)):
+#         if array[i] < array[i - 1]:
+#             dsc_count += 1
+#         elif array[i] > array[i - 1]:
+#             asc_count += 1
+#         elif array[i] == array[i - 1]:
+#             asc_count += 1
+#             dsc_count += 1
+    
+#     if asc_count == len(array) or dsc_count == len(array):
+#         return True
+#     else:
+#         return False
 
+
+def is_mono(array):
+    asc = True
+    dsc = True
+
+    for i in range(1, len(array)):
+        if array[i] > array[i - 1]:
+            dsc = False
+        elif array[i] < array[i - 1]:
+            asc = False
+    
+    return asc or dsc
+
+print(is_mono([7,6,5,5,2,0]))
+print(is_mono([2,3,3,3]))
+print(is_mono([1,2,0,4]))

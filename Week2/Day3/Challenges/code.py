@@ -83,7 +83,22 @@ def l2_norm(array):
         list_sum += (num ** 2)
     return int(math.sqrt(list_sum))
 
-print(l2_norm([1,2,2]))
+# print(l2_norm([1,2,2]))
+
+# 9
+my_array = [7,6,8,5,2,0]
+
+def is_mono(array):
+    asc = True
+    dsc = True
+
+    for i in range(1, len(array)):
+        if array[i] > array[i - 1]:
+            dsc = False
+        elif array[i] < array[i - 1]:
+            asc = False
+    
+    return asc or dsc
 
 # 10
 my_list = ['a',101,2,'there',5,'was',10,12,'continuous','traffic']
@@ -122,12 +137,13 @@ print(is_palindrome(my_string))
 # 13
 
 def sum_over_k(k, sentence):
-    temp = sentence.split(" ")
+    temp = sentence.split()
     counter = 0
     for word in temp:
         if len(word) >= k:
             counter += 1
     return counter
+print(sum_over_k(4, "The quick brown fox jumps over the lazy dog"))
 
 # 14
 my_dict = {'a': 8,'b':8,'c':8,'d': 8}
