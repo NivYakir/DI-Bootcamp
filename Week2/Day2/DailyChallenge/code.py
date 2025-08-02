@@ -8,44 +8,85 @@ sM
 $a 
 #t%'''
 
-def string_to_2D(text):
-    '''Converts a string to a 2D Matrix'''
+# def string_to_2D(text):
+#     '''Converts a string to a 2D Matrix'''
+#     result = []
+#     temp = text.split('\n')
+#     for rows in temp:
+#         row = []
+#         for char in rows:
+#             row.append(char)
+#         result.append(row)
+#     return result
+
+# matrix = string_to_2D(MATRIX_STR)
+
+# # matrix = [[char for char in row] for row in MATRIX_STR.split('\n')]
+
+# def matrix_decoder():
+#     row_num = len(matrix)
+#     col_num = len(matrix[0])
+#     result = ''
+#     for col in range(col_num):
+#         for row in range(row_num):
+#             char = matrix[row][col]
+#             result += char
+#     return result
+
+# def text_clean():
+#     uncleaned = matrix_decoder()
+#     result = ''
+
+#     for i, char in enumerate(uncleaned):
+#         if i == 0:
+#             if char.isalpha():
+#                 result += char
+#         elif char.isalpha():
+#             result += char
+#         elif (char.isalpha() == False) and (uncleaned[i - 1].isalpha() == True):
+#             result += ' '
+    
+#     return result.strip()
+
+# print(text_clean())
+
+
+
+def list_to_2d(text):
     result = []
     temp = text.split('\n')
-    for rows in temp:
+    for line in temp:
         row = []
-        for char in rows:
+        for char in line:
             row.append(char)
         result.append(row)
     return result
 
-matrix = string_to_2D(MATRIX_STR)
-
-# matrix = [[char for char in row] for row in MATRIX_STR.split('\n')]
-
-def matrix_decoder():
-    row_num = len(matrix)
-    col_num = len(matrix[0])
+def decode_matrix(text):
     result = ''
-    for col in range(col_num):
-        for row in range(row_num):
-            char = matrix[row][col]
-            result += char
+    matrix = list_to_2d(text)
+    for col in range(len(matrix[0])):
+        for row in range(len(matrix)):
+            letter = matrix[row][col]
+            result += letter
     return result
 
-def text_clean():
-    uncleaned = matrix_decoder()
+
+uncleaned = decode_matrix(MATRIX_STR)
+
+def filter_text(text):
     result = ''
-
-    for i, char in enumerate(uncleaned):
+    for i, char in enumerate(text):
         if i == 0:
-            if char.isalpha():
+            if char.isalpha() == True:
                 result += char
-        elif char.isalpha():
-            result += char
-        elif (char.isalpha() == False) and (uncleaned[i - 1].isalpha() == True):
-            result += ' '
-    
-    return result.strip()
 
-print(text_clean())
+        elif char.isalpha() == True:
+            result += char
+        
+        elif (char.isalpha() == False) and text[i - 1].isalpha() == True:
+            result += ' '
+    return result
+
+
+print(filter_text(uncleaned))

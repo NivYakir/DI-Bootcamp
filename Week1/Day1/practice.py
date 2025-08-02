@@ -255,10 +255,23 @@
 
 
 
-my_list = ['*','*','*','*','*','*','*','*']
+# my_list = ['*','*','*','*','*','*','*','*']
 
-def put_in(index=int, thelist=my_list):
-    item = 'apple'
-    thelist[index] = item
-    return thelist
+# def put_in(index=int, thelist=my_list):
+#     item = 'apple'
+#     thelist[index] = item
+#     return thelist
+
+
+
+
+my_list = ['Apples','Ananas','Cherry','Banana','Cucumber','Almonds','Pear','Mango','Berries','Strawberry','Cashew']
+result = {}
+
+
+for item in my_list:
+    if item[0].upper() not in result.keys():
+        result[item[0]] = [item]
+    else:
+        result[item[0]].append(item)
 

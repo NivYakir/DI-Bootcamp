@@ -32,7 +32,7 @@ def letter_check(board,word,guessed_letters) -> bool:
                 else:
                     if user_input not in guessed_letters:
                         guessed_letters.append(user_input)
-                        print("Letter is not in the word.")
+                        print(f"'{user_input}' is not in the word.")
                     return False
         else:
             print("Invalid input.")
@@ -110,9 +110,9 @@ def main():
     print("Welcome to Hangman! Try to guess the word by inputting a letter. You have 6 tries to guess all the letters!")
     while attempt > 0:
         print(f"You have {attempt} tries left!")
-        display_board(board)
         print(f"Guessed Letters: {guessed_letters}")
         display_gallows(attempt)
+        display_board(board)
         if letter_check(board,word,guessed_letters) == False:
             attempt -= 1
         if win_check(board) == True:

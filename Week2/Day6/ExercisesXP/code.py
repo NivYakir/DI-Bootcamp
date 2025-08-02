@@ -1,24 +1,125 @@
 # Exercise 1: Cats
-
 class Cat:
     def __init__(self, cat_name, cat_age):
         self.name = cat_name
         self.age = cat_age
 
-cat1 = Cat("Max", 8)
-cat2 = Cat("Darcy", 10)
-cat3 = Cat("Puss", 6)
+# Step 1: Create cat objects
+cat1 = Cat('Garfield', 12)
+cat2 = Cat('Puss', 20)
+cat3 = Cat('Sylvester', 19)
 
-def find_oldest_cat(self, cat1, cat2):
-    oldest = ''
-    if self.age > cat1.age and self.age > cat2.age:
-        oldest = self
-    elif cat1.age > self.age and cat1.age > cat2.age:
-        oldest = cat1
+def get_oldest(cat1,cat2,cat3):
+    oldest_cat = None
+    if cat1.age > cat2.age and cat1.age > cat3.age:
+        oldest_cat = cat1
+    elif cat2.age > cat1.age and cat2.age > cat3.age:
+        oldest_cat = cat2
     else:
-        oldest = cat2
-    print(f"The oldest cat is {oldest.name}, and {oldest.age} years old.")
+        oldest_cat = cat3
 
-find_oldest_cat(cat1,cat2,cat3)
+    print(f"The oldest cat is {oldest_cat.name}, and is {oldest_cat.age} years old.")
 
-# Exercise 2: 
+get_oldest(cat1,cat2,cat3)
+
+# Exercise 2: Dogs
+# Step 1 - Create Dog Class + Methods
+class Dog:
+    def __init__(self, name, height):
+        self.name = name
+        self.height = height
+
+    def bark(self):
+        print(f"{self.name} goes woof!")
+    
+    def jump(self):
+        print(f"{self.name} jumps {self.height * 2}cm high!")
+
+# Step 2 - Create Dog objects
+davids_dog = Dog('Max', 64)
+sarahs_dog = Dog('Macy', 42)
+
+# Step 3 - Print Dog Details and Call Methods
+print(f"David's dog is named {davids_dog.name} and he is {davids_dog.height}cm tall.")
+print(f"Sarah's dog is named {sarahs_dog.name} and she is {sarahs_dog.height}cm tall.")
+davids_dog.bark()
+davids_dog.jump()
+sarahs_dog.bark()
+sarahs_dog.jump()
+
+# Step 4 - Compare the Dog Sizes:
+if davids_dog.height > sarahs_dog.height:
+    print(f"{davids_dog.name} is taller than {sarahs_dog.name} by {davids_dog.height - sarahs_dog.height}cm.")
+else:
+    print(f"{sarahs_dog.name} is taller than {davids_dog.name} by {sarahs_dog.height - davids_dog.height}cm.")
+
+# Exercise 3: Who's the Song Producer?
+class Song:
+    def __init__(self,lyrics):
+        self.lyrics = lyrics
+
+    def sing_me_a_song(self):
+        for word in self.lyrics:
+            print(word)
+
+stairway = Song(["There's a lady who's sure", "all that glitters is gold", 
+                 "and she's buying a stairway to heaven"])
+
+stairway.sing_me_a_song()
+
+# Exercise 4: Afternoon at the Zoo
+class Zoo:
+    def __init__(self,zoo_name,animals=[]):
+        self.zoo_name = zoo_name
+        self.animals = animals
+    
+    def add_animal(self, new_animal):
+        '''Adds an animal into the Zoo if one doesn't already exist'''
+        if new_animal not in self.animals:
+            self.animals.append(new_animal)
+        else:
+            print("Animal is already in the zoo.")
+        return self
+
+    def get_animals(self):
+        '''Prints all the animals in the Zoo.'''
+        print(self.animals)
+    
+    def sell_animal(self, animal_sold):
+        '''Sell(remove) an animal if it is in the Zoo'''
+        if animal_sold in self.animals:
+            self.animals.remove(animal_sold)
+        return self
+
+    def sort_animals(self):
+        '''Returns a dictionary where the animals are groups based on their first letter'''
+        result = {}
+        self.animals.sort()
+        for animal in self.animals:
+            if animal[0].upper() not in result.keys():
+                result[animal[0]] = [animal]
+            else:
+                result[animal[0]].append(animal)
+        return result
+
+    def get_groups(self):
+        '''Prints a list of groups of animals based on their first letter. Ordered alphabetically'''
+        temp = self.sort_animals()
+        for k, v in temp.items():
+            print(f"{k} : {v}")
+
+
+my_zoo = Zoo("Prague Zoo")
+my_zoo.add_animal('Zebra')
+my_zoo.add_animal('Gorilla')
+my_zoo.add_animal('Elephant')
+my_zoo.get_animals()
+my_zoo.add_animal('Giraffe')
+my_zoo.add_animal('Hippo')
+my_zoo.add_animal('Hyena')
+my_zoo.add_animal('Beaver')
+my_zoo.add_animal('Baboon')
+my_zoo.sell_animal('Elephant')
+my_zoo.get_animals()
+
+my_zoo.get_groups()
