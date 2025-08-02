@@ -109,13 +109,15 @@ def separate(a_list):
 
 # 12
 
-my_string = 'titties'
+my_string = 'able was i ere i saw elba'
 
 def is_palindrome(word):
     if word == word[::-1]:
         return True
     else:
         return False
+
+print(is_palindrome(my_string))
     
 # 13
 
