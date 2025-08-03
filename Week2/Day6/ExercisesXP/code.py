@@ -1,4 +1,5 @@
 # Exercise 1: Cats
+
 class Cat:
     def __init__(self, cat_name, cat_age):
         self.name = cat_name
@@ -7,8 +8,8 @@ class Cat:
 # Step 1: Create cat objects
 
 cat1 = Cat('Garfield', 12)
-cat2 = Cat('Puss', 7)
-cat3 = Cat('Sylvester', 10)
+cat2 = Cat('Puss', 15)
+cat3 = Cat('Sylvester', 17)
 
 def get_oldest(cat1,cat2,cat3):
     oldest_cat = None
@@ -80,6 +81,7 @@ stairway = Song(["There's a lady who's sure", "all that glitters is gold", "and 
 stairway.sing_me_a_song()
 
 # Exercise 4: Afternoon at the Zoo
+
 class Zoo:
     def __init__(self,zoo_name,animals=[]):
         self.zoo_name = zoo_name
@@ -99,7 +101,7 @@ class Zoo:
     
     def sell_animal(self, animal_sold):
         '''Sell(remove) an animal if it is in the Zoo'''
-        if animal_sold.upper() in self.animals.upper():
+        if animal_sold in self.animals:
             self.animals.remove(animal_sold)
         else:
             print('That animal is not in the Zoo.')
@@ -110,7 +112,7 @@ class Zoo:
         result = {}
         self.animals.sort()
         for animal in self.animals:
-            if animal[0].upper() not in result.keys():
+            if animal[0] not in result.keys():
                 result[animal[0]] = [animal]
             else:
                 result[animal[0]].append(animal)
