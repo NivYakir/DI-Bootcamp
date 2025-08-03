@@ -1,9 +1,9 @@
 # Exercise 4: Afternoon at the Zoo
 
 class Zoo:
-    def __init__(self,zoo_name,animals=[]):
+    def __init__(self,zoo_name):
         self.zoo_name = zoo_name
-        self.animals = animals
+        self.animals = []
     
     def add_animal(self, new_animal):
         '''Adds an animal into the Zoo if one doesn't already exist'''

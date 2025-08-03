@@ -28,13 +28,13 @@ sarahs_dog.jump()
 
 # Step 4 - Compare the Dog Sizes:
 
-taller_dog = None
-shorter_dog = None
+bigger_dog = None
+smaller_dog = None
 if davids_dog.height > sarahs_dog.height:
-    taller_dog = davids_dog
-    shorter_dog = sarahs_dog
+    bigger_dog = davids_dog
+    smaller_dog = sarahs_dog
 else:
-    taller_dog = sarahs_dog
-    shorter_dog = davids_dog
+    bigger_dog = sarahs_dog
+    smaller_dog = davids_dog
 
-print(f"{taller_dog.name} is taller than {shorter_dog.name} by {taller_dog.height - shorter_dog.height}cm.")
+print(f"{bigger_dog.name} is bigger than {smaller_dog.name} by {bigger_dog.height - smaller_dog.height}cm.")
