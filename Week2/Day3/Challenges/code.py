@@ -132,7 +132,7 @@ def is_palindrome(word):
     else:
         return False
 
-print(is_palindrome(my_string))
+
     
 # 13
 
@@ -143,7 +143,7 @@ def sum_over_k(k, sentence):
         if len(word) >= k:
             counter += 1
     return counter
-print(sum_over_k(4, "The quick brown fox jumps over the lazy dog"))
+
 
 # 14
 my_dict = {'a': 8,'b':8,'c':8,'d': 8}
@@ -177,6 +177,20 @@ def is_prime(num):
             return False
     return True
 
+def is_prime_optimized(num):
+    if num <= 1:
+        return False
+    if num == 2:
+        return True
+    if num % 2 == 0:
+        return False
+    for n in range(3, int(num**0.5) + 1, 2):
+        if num % n == 0:
+            return False
+    return True
+
+print(is_prime_optimized(999998727899))
+
 # 17
 my_nums = [1,2,2,3,4,5]
 
@@ -205,6 +219,8 @@ def type_count(**kwargs):
             bool_count +=1
 
     return f"int: {int_count}, str: {str_count}, float: {float_count}, bool: {bool_count}"
+
+print(type_count())
 
 # 19
 my_sentence = 'today/there/was/a/big/ass/bird/outside/and/it made/me cry   '

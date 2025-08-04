@@ -46,6 +46,13 @@ class Phone:
         print("Call History:")
         for call in self.call_history:
             print(call)
+
+    def show_messages_from(self,other_phone):
+        '''Prints the messages received from a specified phone'''
+        print(f"Messages from {other_phone.phone_number}: ")
+        for text in self.messages:
+            if text['From'] == other_phone.phone_number:
+                print(text)
     
 
 
@@ -55,13 +62,17 @@ gf_phone = Phone('123-555-5555')
 friends_phone = Phone('052-555-2222')
 moms_phone = Phone('052-555-1111')
 
-
+print(my_phone.__dict__)
 
 my_phone.send_message(gf_phone,'I love you')
 gf_phone.send_message(my_phone,"Awh you're so sweet")
+gf_phone.send_message(my_phone,'lets grab dinner later')
+gf_phone.send_message(my_phone,'wanna go to the mall?')
 moms_phone.send_message(my_phone,"Where are you?")
 my_phone.send_message(friends_phone,'lets hang out')
 friends_phone.send_message(my_phone,'Sounds good. After dinner.')
 
 my_phone.show_incoming_messages()
 my_phone.show_outgoing_messages()
+my_phone.show_messages_from(gf_phone)
+my_phone.show_messages_from(friends_phone)
