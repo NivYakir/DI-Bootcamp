@@ -80,7 +80,7 @@ p.go_to_page(10)
 print(p.current_idx + 1)
 # Output: 7
 
-p.go_to_page(0)
+p.go_to_page(7).next_page()
 # Raises ValueError
 
 print(str(p))
