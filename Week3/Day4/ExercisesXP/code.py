@@ -4,40 +4,38 @@ class Currency:
     def __init__(self, currency, amount):
         self.currency = currency
         self.amount = amount
-    
+
     def __str__(self):
         if self.amount > 1:
             return f"{self.amount} {self.currency}s"
         else:
             return f"{self.amount} {self.currency}"
-
-    def __repr__(self):
-        return f"{self.__dict__}"
     
+    def __repr__(self):
+        return f"Currency('{self.currency}', {self.amount})"
+
     def __int__(self):
         return int(self.amount)
     
     def __add__(self, other):
         if isinstance(other, int):
-            return f"{self.amount + other}"
+            return self.amount + other
         elif isinstance(other, Currency):
             if self.currency == other.currency:
-                return f"{self.amount + other.amount}"
+                return self.amount + other.amount
             else:
-                raise TypeError(f"Cannot add between {self.currency} and {other.currency}")
+                raise TypeError(f"Cannot add {self.currency} and {other.currency}")
     
     def __iadd__(self, other):
         if isinstance(other, int):
             self.amount += other
             return self
-        
         elif isinstance(other, Currency):
             if self.currency == other.currency:
                 self.amount += other.amount
-                return f"{self.amount} {self.currency}s"
+                return self
             else:
-                raise TypeError(f"Cannot add between {self.currency} and {other.currency}")
-
+                raise TypeError(f"Cannot add {self.currency} and {other.currency}")
 
 # Exercise 2: Import
 
