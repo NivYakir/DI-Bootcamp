@@ -9,8 +9,8 @@ class Circle:
             if not isinstance(radius, (int, float)) or radius <= 0:
                 raise ValueError("Radius must be a positive number.")
             self._radius = radius
-        else:
 
+        else:
             if not isinstance(diameter, (int, float)) or diameter <= 0:
                 raise ValueError("Diameter must be a positive number.")
             self._radius = diameter / 2
@@ -21,7 +21,6 @@ class Circle:
     
     @radius.setter
     def radius(self, num):
-
         if not isinstance(num, (int, float)) or num <= 0:
             raise ValueError("Radius must be a positive number.")
         self._radius = num
@@ -32,9 +31,9 @@ class Circle:
     
     @diameter.setter
     def diameter(self, num):
-
         if not isinstance(num, (int, float)) or num <= 0:
             raise ValueError("Diameter must be a positive number.")
+        
         self._radius = num / 2
 
     @property
@@ -54,33 +53,41 @@ class Circle:
     def __add__(self, other):
         if isinstance(other, Circle):
             return Circle(radius=self.radius + other.radius)
+        
         elif isinstance(other, (int, float)) and other > 0:
             return Circle(radius=self.radius + other)
+        
         else:
             raise ValueError("Can only add another Circle or a positive number.")
     
     def __iadd__(self, other):
         if isinstance(other, Circle):
             self.radius += other.radius
+
         elif isinstance(other, (int, float)) and other > 0:
             self.radius += other
+
         else:
             raise ValueError("Can only add another Circle or a positive number.")
+        
         return self
     
     def __lt__(self, other):
         if not isinstance(other, Circle):
             return NotImplemented
+        
         return self.radius < other.radius
     
     def __gt__(self, other):
         if not isinstance(other, Circle):
             return NotImplemented
+        
         return self.radius > other.radius
 
     def __eq__(self, other):
         if not isinstance(other, Circle):
             return NotImplemented
+        
         return self.radius == other.radius
 
 
