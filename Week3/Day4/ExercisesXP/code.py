@@ -6,37 +6,34 @@ class Currency:
         self.amount = amount
 
     def __str__(self):
-        if self.amount > 1:
-            return f"{self.amount} {self.currency}s"
-        else:
-            return f"{self.amount} {self.currency}"
-    
+        return f"{self.amount} {self.currency}"
+
     def __repr__(self):
-        return f"Currency('{self.currency}', {self.amount})"
+        return f"Currency(currency='{self.currency}', amount={self.amount})"
 
     def __int__(self):
-        return int(self.amount)
-    
+        return self.amount
+
     def __add__(self, other):
-        if isinstance(other, int):
-            return self.amount + other
-        elif isinstance(other, Currency):
-            if self.currency == other.currency:
-                return self.amount + other.amount
-            else:
-                raise TypeError(f"Cannot add {self.currency} and {other.currency}")
-    
+        if isinstance(other, (int, float)):
+            return Currency(self.currency, self.amount + other)
+        if isinstance(other, Currency):
+            if self.currency != other.currency:
+                raise TypeError(f"Cannot add different currencies. Got {self.currency} and {other.currency}")
+            return Currency(self.currency, self.amount + other.amount)
+        raise TypeError(f"Unsupported operand type for +: 'Currency' and '{type(other).__name__}'")
+
     def __iadd__(self, other):
-        if isinstance(other, int):
+        if isinstance(other, (int, float)):
             self.amount += other
             return self
-        elif isinstance(other, Currency):
-            if self.currency == other.currency:
-                self.amount += other.amount
-                return self
-            else:
-                raise TypeError(f"Cannot add {self.currency} and {other.currency}")
-
+        if isinstance(other, Currency):
+            if self.currency != other.currency:
+                raise TypeError(f"Cannot add different currencies. Got {self.currency} and {other.currency}")
+            self.amount += other.amount
+            return self
+        raise TypeError(f"Unsupported operand type for +=: 'Currency' and '{type(other).__name__}'")
+    
 # Exercise 2: Import
 
 import func

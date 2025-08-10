@@ -1,86 +1,60 @@
-# Pagination
 import math
+# Pagination
 
 class Pagination:
     def __init__(self, items=None, page_size=10):
         if items is None:
-            self.items = []
-        else:
-            self.items = list(items)
+            items = []
 
+        self.items = list(items)
         self.page_size = page_size
         self.current_idx = 0
-        self.total_pages = math.ceil(len(self.items) / self.page_size)
 
+    @property
+    def total_pages(self):
+        return math.ceil(len(self.items) / self.page_size)
+    
     def get_visible_items(self):
-        '''Returns the list of items visible on the current page'''
         start = self.current_idx * self.page_size
-        end = start + self.page_size
-
-        return self.items[start : end]
-
+        end = (self.current_idx * self.page_size) + self.page_size
+        return self.items[start: end]
+    
     def go_to_page(self, page_num):
-        '''Goes to specified page number (1-based indexing)'''
-        try:
-            if not isinstance(page_num, int):
-                raise TypeError("Input must be an integer")
-            if page_num not in range(1, self.total_pages + 1):
-                raise ValueError("Page Number Out of Range")
+        if isinstance(page_num, int) and (page_num in range(1, self.total_pages + 1)):
             self.current_idx = page_num - 1
-            return self
-        except Exception as e:
-            print(f"Invalid Entry: {e}")
+        else:
+            raise IndexError("Page number is outside the valid range.")
+        return self
     
     def first_page(self):
-        '''Navigate to the first page'''
         self.current_idx = 0
         return self
     
     def last_page(self):
-        '''Navigate to the last page'''
         self.current_idx = self.total_pages - 1
         return self
-
-    def next_page(self):
-        '''Navigate forward one page'''
-        if self.current_idx == self.total_pages - 1:
-            raise IndexError("You are on the last page")
-        else:
-            self.current_idx += 1
-            return self
     
-    def previous_page(self):
-        '''Navigate back one page'''
+    def next_page(self):
+        if self.current_idx == self.total_pages - 1:
+            raise IndexError("You are on the last page.")
+        self.current_idx += 1
+        return self
+    
+    def prev_page(self):
         if self.current_idx == 0:
-            raise IndexError("You are on the first page")
-        else:
-            self.current_idx -= 1
-            return self
-        
+            raise IndexError("You are on the first page.")
+        self.current_idx -= 1
+        return self
+    
     def __str__(self):
-        visible_items = self.get_visible_items()
-        return '\n'.join(str(item) for item in visible_items)
+        result = '\n'.join(str(item) for item in self.get_visible_items())
+        return result
+
+
 
 
 alphabetList = list("abcdefghijklmnopqrstuvwxyz")
 p = Pagination(alphabetList, 4)
 
-print(p.get_visible_items())
-# ['a', 'b', 'c', 'd']
-
-p.next_page()
-print(p.get_visible_items())
-# ['e', 'f', 'g', 'h']
-
-p.last_page()
-print(p.get_visible_items())
-# ['y', 'z']
-
-p.go_to_page(10)
-print(p.current_idx + 1)
-# Output: 7
-
-p.go_to_page(7).next_page()
-# Raises ValueError
-
-print(str(p))
+# print(p.get_visible_items())
+print(p.go_to_page(8).get_visible_items())

@@ -112,3 +112,4 @@ my_list.append(c3)
 my_list.sort()
 for c in my_list:
     print(str(c))
+
