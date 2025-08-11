@@ -6,7 +6,7 @@ from datetime import datetime, date
 
 class Person:
 
-    id_number = 1 # 
+    id_number = 1 
 
     def __init__(self, name, last_name, birth_date):
         self.name = self.format_name(name)

@@ -18,6 +18,8 @@ def list_to_2d(text):
         result.append(row)
     return result
 
+print(list_to_2d(MATRIX_STR))
+
 def decode_matrix(text):
     result = ''
     matrix = list_to_2d(text)

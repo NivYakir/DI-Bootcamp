@@ -34,4 +34,4 @@ print(my_family2)
 
 # CONVERT FROM JSON STRING TO DICTIONARY
 parsed_family = json.loads(json_my_family_string)
-print(type(parsed_family)) # it's dict because we parsed it 
+print(type(parsed_family)) # it's dict because we parsed it
