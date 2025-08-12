@@ -94,7 +94,7 @@ class Circle:
 
 
     
-c1 = Circle(5)
+c1 = Circle(diameter=5)
 c2 = Circle(3)
 c3 = Circle(8)
 

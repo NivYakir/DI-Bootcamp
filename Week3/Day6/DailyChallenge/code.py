@@ -2,6 +2,7 @@
 import os
 import string
 import re
+from collections import Counter
 
 stop_words = [
     "a", "about", "above", "after", "again", "against", "all", "am", "an", "and",
@@ -33,26 +34,25 @@ print(my_file)
 class Text:
     def __init__(self, text):
         self.text = text
-    
+
     @property
-    def txt_list(self):
+    def word_list(self):
         return self.text.split()
     
     def word_frequency(self, word):
-        if word not in self.txt_list:
-            return None
-        return self.txt_list.count(word)
+        result = Counter(self.word_list)
+        return result[word]
     
     def most_common_word(self):
         my_dict = {}
-        for word in self.txt_list:
-            if word not in my_dict.keys():
-                my_dict[word] = self.txt_list.count(word)
-
+        for word in self.word_list:
+            my_dict[word] = my_dict.get(word, 0) + 1
+        
         return max(my_dict, key=my_dict.get)
     
     def unique_words(self):
-        return set(self.txt_list)
+        result = set(self.word_list)
+        return list(result)
 
     @classmethod
     def from_file(cls, file_path):
