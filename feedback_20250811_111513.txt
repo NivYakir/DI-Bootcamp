@@ -1,0 +1,17 @@
+URL: URL: https://github.com/NivYakir/DI-Bootcamp/blob/main/Week3/Day6/ExercisesXP/code.py
+suggestions for improvement:
+- The `get_words_from_file` function should include error handling (e.g., a `try-except` block) to gracefully handle situations where the file might not exist or is not readable.
+- The `get_random_sentence` function could benefit from checking for an empty word list before attempting to choose random words to prevent errors.
+- The program should explicitly check if the `words.txt` file exists before attempting to process it. If it doesn't exist, the program should provide a helpful message to the user.
+- The main function's input validation is good.  However, consider using a more user-friendly approach to guide the user toward valid input, such as a `while` loop that keeps asking for input until valid data is provided.
+- The code for Exercise 2 lacks error handling; it should include a `try-except` block to handle potential `KeyError` exceptions during JSON access.  Robust error handling is crucial.
+Correctness: 95%
+-----
+URL: URL: https://github.com/NivYakir/DI-Bootcamp/blob/main/Week3/Day6/ExercisesXP/sample.json
+suggestions for improvement:
+- The provided code only addresses Exercise 2.  Exercise 1 (random sentence generator) is missing entirely.
+- The code lacks error handling (e.g., `try-except` blocks) for file I/O operations, which is mentioned as a key topic in Exercise 1.
+- The 'birth_date' should be dynamically obtained, rather than hardcoded.  The instructions suggest this. The exercise expects user input or  a more robust way to get the date.
+- The code doesn't show the file saving process (writing the modified JSON to a file), which is a crucial part of Exercise 2.
+Correctness: 80%
+-----
