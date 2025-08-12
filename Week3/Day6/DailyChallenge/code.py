@@ -25,7 +25,6 @@ stop_words = [
     "you'd", "you'll", "you're", "you've", "your", "yours", "yourself", "yourselves"
 ]
 
-
 my_txt = "today, yesterday and tomorrow. They'll there was today a beach there was today a beach today!"
 dir_path = os.path.dirname(os.path.realpath(__file__))
 my_file = f"{dir_path}\\practice.txt"
@@ -49,7 +48,7 @@ class Text:
         for word in self.txt_list:
             if word not in my_dict.keys():
                 my_dict[word] = self.txt_list.count(word)
-        print(my_dict)
+
         return max(my_dict, key=my_dict.get)
     
     def unique_words(self):
