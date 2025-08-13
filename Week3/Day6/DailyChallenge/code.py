@@ -60,7 +60,10 @@ class Text:
             content = f.read()
         
         return cls(content)
-        
+
+
+t1 = Text.from_file(my_file)
+print(t1)
 
 class TextModification(Text):
     def __init__(self, text):
@@ -82,9 +85,9 @@ class TextModification(Text):
 
 
 
-t1 = Text(my_txt)
-print(t1.most_common_word())
-print(t1.unique_words())
+# t1 = Text(my_txt)
+# print(t1.most_common_word())
+# print(t1.unique_words())
 
-t2 = TextModification(my_txt)
-print(t2.remove_stop_words())
+# t2 = TextModification(my_txt)
+# print(t2.remove_stop_words())

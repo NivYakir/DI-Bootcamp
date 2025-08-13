@@ -1,6 +1,7 @@
 from collections import Counter
 import os
-
+dir_path = os.path.dirname(os.path.realpath(__file__))
+my_file = f"{dir_path}\\practice.txt"
 my_text = 'hello hello hello hi hi how are you today hello hi hi'
 
 class Text:
@@ -26,8 +27,16 @@ class Text:
         result = set(self.word_list)
         return list(result)
 
+    @classmethod
+    def from_file(cls, file_path):
+        with open(file_path, 'r', encoding='utf-8') as f:
+            content = f.read()
+        
+        return cls(content)
 
-t1 = Text(my_text)
-print(t1.word_frequency('people'))
-print(t1.most_common_word())
-print(t1.unique_words())
+    def __str__(self):
+        return f"{self.text}"
+
+text_instance = Text.from_file(f"{dir_path}/practice.txt")
+
+print(text_instance)
