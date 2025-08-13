@@ -5,12 +5,12 @@ def main():
     print("Welcome to the anagram checker!")
     while True:
         try: 
-            user_input = input("Enter a word to receive all of its anagrams, or 'Q' to quit:")
+            user_input = input("Enter a word to receive all of its anagrams, or 'Q' to quit:\n")
             user_input = user_input.strip()
             if user_input.upper() == 'Q':
                 print("You have quit the program.")
                 break
-
+            
             if len(user_input.split()) != 1:
                 raise ValueError("Only one word can be checked at a time.")
             
@@ -29,7 +29,5 @@ def main():
             
         except Exception as e:
             print(f"Input Error: {e}")
-
-
 
 main()
