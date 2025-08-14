@@ -1,3 +1,0 @@
-This is a text file for practice.
-I would like to translate every line in this file.
-The above lines will be included in the translation.

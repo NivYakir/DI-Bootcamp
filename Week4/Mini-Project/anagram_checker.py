@@ -1,11 +1,19 @@
 import os
+from collections import defaultdict
 dir_path = os.path.dirname(os.path.realpath(__file__))
 
 class AnagramChecker:
     '''This class can take a valid word in English and return all of its anagrams!'''
     def __init__(self):
         with open(f'{dir_path}/sowpods.txt', 'r', encoding='utf-8') as file:
-            self.word_list = [line.strip() for line in file]
+            self.word_list = file.read().splitlines()
+        
+        dict_list = defaultdict(list)
+        for word in self.word_list:
+            key = ''.join(sorted(word))
+            dict_list[key].append(word)
+        self.dict_list = dict_list
+
         
     def is_valid_word(self, word):
         '''Checks if the word exists'''
@@ -18,12 +26,6 @@ class AnagramChecker:
         return sorted(w1) == sorted(w2)
     
     def get_anagrams(self, word):
-        '''Returns all of the anagrams of a given word'''
-        word = word.upper()
-        anagrams = []
-        for target in self.word_list:
-            if target != word and self.is_anagram(word, target):
-                anagrams.append(target)
-                
-        return anagrams
+        kword = ''.join(sorted(word.upper()))
+        return ', '.join(w.lower() for w in self.dict_list.get(kword, []) if w != word.upper())
 

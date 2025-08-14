@@ -25,7 +25,7 @@ def main():
             if len(result) == 0:
                 print(f"The word '{user_input}' has no anagrams!")
             else:
-                print(f"Word: {user_input}\nAnagrams: {', '.join(w.lower() for w in result)}")
+                print(f"Word: {user_input}\nAnagrams: {result}")
             
         except Exception as e:
             print(f"Input Error: {e}")
