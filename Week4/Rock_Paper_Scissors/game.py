@@ -17,7 +17,9 @@ class Game:
         return random.choice(['r','p','s'])
     
     def get_game_result(self, user_item, comp_item):
-        if (user_item == 'r' and comp_item == 's') or (user_item == 's' and comp_item == 'p') or (user_item == 'p' and comp_item == 'r'):
+        if  (user_item == 'r' and comp_item == 's') or \
+            (user_item == 's' and comp_item == 'p') or \
+            (user_item == 'p' and comp_item == 'r'):
             return 'Win'
         elif user_item == comp_item:
             return 'Draw'

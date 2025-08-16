@@ -1,0 +1,2 @@
+1. What is a class
+A class is a blueprint or template for creating objects.
