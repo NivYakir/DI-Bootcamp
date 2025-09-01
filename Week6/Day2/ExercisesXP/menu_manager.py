@@ -1,31 +1,23 @@
-# Exercise 1: Restaurant Menu Manager (cont.)
 import psycopg2
-connection = psycopg2.connect(
-    database = 'restaurant',
-    user = 'postgres',
-    password = 'postgres',
-    host = 'localhost',
-    port = '5432'
-)
-cursor = connection.cursor()
+from menu_item import MenuItem, cur
 
-# 4. Create a new class called MenuManager
 class MenuManager:
     @classmethod
-    def get_by_name(cls, cursor, name):
-        '''Returns a row depending on the item name that is specified'''
+    def get_by_name(cls, name):
+        query = "SELECT item_name, item_price FROM menu_items WHERE item_name = %s"
+        cur.execute(query, (name, ))
+        exists = cur.fetchone()
 
-        query = 'SELECT * FROM menu_items WHERE item_name = %s'
-        cursor.execute(query, (name,))
-        result = cursor.fetchone()
-        return result
+        if exists:
+            item_name, item_price = exists
+            return MenuItem(item_name, item_price)
+        else:
+            return None
 
     @classmethod
-    def all_items(cls, cursor):
-        '''Returns all rows in the menu_items table'''
-
+    def all_items(cls):
         query = 'SELECT * FROM menu_items'
-        cursor.execute(query)
-        rows = cursor.fetchall()
+        cur.execute(query)
+        rows = cur.fetchall()
 
-        return [row for row in rows]
+        return [row[1] for row in rows]
