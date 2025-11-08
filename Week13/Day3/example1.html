@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Interaction Example</title>
+</head>
+<body>
+    <button id="clickButton">Click Me</button>
+    <p id="displayText">Button not clicked yet.</p>
+    <div id="example">This is <strong>important</strong> text.</div>
+
+    <script>
+        // Accessing the button and paragraph elements
+        const button = document.getElementById("clickButton");
+        const displayText = document.getElementById("displayText");
+
+
+        // Function to change text
+        function changeText() {
+            // .innerHTML  : used to get or set the HTML content inside an element.
+            displayText.innerHTML = "Button clicked!";
+        }
+
+        // Event listener for button click
+        button.addEventListener("click", changeText);
+    </script>
+</body>
+</html>
