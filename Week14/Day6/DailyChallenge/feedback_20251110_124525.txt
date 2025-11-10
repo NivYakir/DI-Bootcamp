@@ -1,0 +1,10 @@
+URL: https://github.com/NivYakir/DI-Bootcamp/blob/main/Week14/Day6/DailyChallenge/gradebook.ipynb
+suggestions for improvement:
+- Consider using more descriptive variable names to enhance readability.
+- The code can be simplified by directly writing to the worksheet instead of using Pandas DataFrame as an intermediary.
+Brief justification:
+- correctness: The code accurately creates an Excel file, names the sheet 'Grades', populates the data, calculates average grades with formulas, and applies bold and colored formatting to the header row. All requirements of the task are met.
+- readability: The code is generally readable, with comments explaining each step. However, some variable names could be more descriptive.
+- performance: Using pandas as an intermediary for writing to excel might be slightly less performant than writing directly. But the difference should be insignificant in most cases.
+- security: The code doesn't involve any external input or potentially vulnerable operations.
+
