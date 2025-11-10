@@ -17,7 +17,7 @@ def list_to_2d(text):
             row.append(char)
         result.append(row)
     return result
-
+    
 print(list_to_2d(MATRIX_STR))
 
 def decode_matrix(text):
