@@ -1,0 +1,15 @@
+URL: URL: https://github.com/NivYakir/DI-Bootcamp/blob/main/Week4/Mini-Project/anagram_checker.py
+suggestions for improvement:
+- The `anagrams.py` file, responsible for the user interface, is missing.  The instructions explicitly require this file to handle user input and interaction with the `AnagramChecker` class.
+- Error handling for file I/O operations (e.g., `FileNotFoundError`) should be included in the `__init__` method.  What happens if `sowpods.txt` isn't found?
+- The performance of `get_anagrams` could be improved.  Currently, it iterates through the entire word list for each word. A more efficient approach would involve preprocessing the word list to group words by their sorted letter combinations.
+Correctness: 90%
+-----
+URL: URL: https://github.com/NivYakir/DI-Bootcamp/blob/main/Week4/Mini-Project/anagrams.py
+suggestions for improvement:
+- Improve error handling to provide more specific error messages to the user.  For example, instead of a generic 'Input Error', tell the user exactly why their input is invalid.
+- The `anagram_checker.py` file is missing, making it impossible to assess its correctness. The provided code relies on this file which needs to be included for a complete evaluation.
+- The performance could be improved by optimizing the `get_anagrams` method.  Currently, it likely iterates through the entire word list for each potential anagram. Consider using more efficient algorithms or data structures (like a Trie or hash table) for faster lookups.
+- Add input validation to handle edge cases like empty strings or strings with only whitespace.
+Correctness: 95%
+-----
