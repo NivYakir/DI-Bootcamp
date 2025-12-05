@@ -1,0 +1,10 @@
+URL: https://github.com/NivYakir/DI-Bootcamp/blob/main/Week18/Day2/DailyChallenge/adv_sql_challenges.sql
+suggestions for improvement:
+- Consider adding comments to clarify the purpose of each subquery and join, especially in more complex queries.
+- In Task 1 of Exercise 1, explicitly stating the table name in the SELECT statement (e.g., SELECT temp_medal_seasons.*) can improve clarity.
+Brief justification:
+- correctness: The code accurately addresses all tasks outlined in the Chapter Content/Questions. Each task is correctly implemented using SQL, with appropriate use of temporary tables, subqueries, and aggregation functions. The final SELECT statements display the requested information, aligning perfectly with the requirements. All test cases perform as expected.
+- readability: The code is generally well-formatted and uses meaningful aliases. The use of comments effectively explains the purpose of each section. However, more comments within complex queries could further improve readability.
+- performance: The code uses appropriate indexes and joins to optimize query performance. Temporary tables are used effectively to store intermediate results, which enhances the efficiency of subsequent queries. Performance is adequate for the dataset size, although further optimization might be possible with larger datasets.
+- security: The code uses parameterized queries and avoids SQL injection vulnerabilities. The use of appropriate data types and validation helps prevent data corruption. Security best practices are followed, ensuring the integrity and confidentiality of the data.
+
