@@ -100,5 +100,4 @@ FROM no_wins n
 JOIN person p ON n.person_id = p.id
 JOIN games_competitor gc ON n.person_id = gc.person_id
 GROUP BY n.person_id, p.full_name
-ORDER BY appearances DESC
-LIMIT 5;
+ORDER BY appearances DESC;
