@@ -1,0 +1,10 @@
+URL: https://github.com/NivYakir/DI-Bootcamp/blob/main/Week18/Day4/ExercisesXP/window_functions_xp.sql
+suggestions for improvement:
+- Consider adding comments to explain more complex logic, especially within the window function specifications.
+- While the alternative solution for Task 1 in Exercise 2 is correct, sticking to a single consistent style can improve readability. Choose the more straightforward one.
+Brief justification:
+- correctness: All tasks are correctly implemented using appropriate SQL window functions and CTEs as instructed in the exercise descriptions. The queries accurately address the requirements for ranking, segmentation, and cumulative calculations. The alternative solution provided for Task 1 in Exercise 2 provides the correct output, as well. The tasks completely align with the chapter content.
+- readability: The code is generally well-formatted and easy to understand. The use of aliases improves clarity. However, adding comments to explain the logic behind certain window function specifications could enhance readability further.
+- performance: The queries seem reasonably performant given the dataset size. The use of appropriate indexes could further optimize performance, but this is not covered in the chapter.
+- security: The code does not present any apparent security vulnerabilities. It primarily involves data retrieval and aggregation using window functions and CTEs, which do not inherently pose security risks.
+
