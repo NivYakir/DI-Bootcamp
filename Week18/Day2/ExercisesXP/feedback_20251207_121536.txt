@@ -1,0 +1,11 @@
+URL: https://github.com/NivYakir/DI-Bootcamp/blob/main/Week18/Day2/ExercisesXP/adv_sql_exercises.sql
+suggestions for improvement:
+- For Task 1, consider using explicit joins instead of EXISTS for better readability and potential performance.
+- In Task 2, ensure all necessary columns are included in the GROUP BY clause to avoid potential aggregation errors.
+- Task 4 is missing. Implement a DELETE statement using a subquery to remove records from a temporary table based on a condition (no medals won).
+Brief justification:
+- correctness: Task 1 is mostly correct but could benefit from explicit joins. Task 2 correctly identifies the top 5 regions. Task 3 correctly creates and populates the temporary table. Task 4 is missing, reducing the overall correctness score. The code addresses the questions, but there are areas for improvement in each task.
+- readability: The code is generally well-formatted and easy to understand. Comments are helpful in explaining the purpose of each task.
+- performance: The performance is acceptable, but the use of EXISTS in Task 1 could be optimized with explicit joins. Temporary tables are generally efficient for intermediate results.
+- security: The code does not appear to have any obvious security vulnerabilities. Parameterized queries are not necessary in this context as the data is assumed to be trusted.
+
