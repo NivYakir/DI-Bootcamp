@@ -86,7 +86,7 @@ WITH movie_keywords AS (
     FROM movie m
     JOIN movie_keywords mk ON m.movie_id = mk.movie_id
     JOIN keyword k ON mk.keyword_id = k.keyword_id
-    WHERE m.revenue IS NOT NULL
+    WHERE m.revenue <> 0
 ),
 series_revenue AS (
     -- Calculate total revenue for each keyword/series
