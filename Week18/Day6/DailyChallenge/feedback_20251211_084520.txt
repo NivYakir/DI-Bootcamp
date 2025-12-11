@@ -1,0 +1,7 @@
+URL: https://github.com/NivYakir/DI-Bootcamp/blob/main/Week18/Day6/DailyChallenge/cleaning_data_challenge.sql
+Brief justification:
+- correctness: The code directly addresses and accurately implements the data cleaning and transformation tasks outlined in the chapter content. It handles missing values, checks for duplicates, corrects structural issues, ensures appropriate data types, detects outliers, and standardizes data. Each task is addressed with appropriate SQL queries, aligning perfectly with the requirements.
+- readability: The code is well-formatted and easy to read, with clear comments indicating the purpose of each SQL query.
+- performance: The SQL queries used are efficient for the given dataset size and purpose.
+- security: The SQL code does not introduce any apparent security vulnerabilities.
+
