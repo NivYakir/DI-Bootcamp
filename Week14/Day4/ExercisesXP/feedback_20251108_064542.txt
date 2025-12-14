@@ -1,0 +1,26 @@
+URL: URL: https://github.com/NivYakir/DI-Bootcamp/blob/main/Week14/Day4/ExercisesXP/List of Holidays.xlsx
+suggestions for improvement:
+- The submission consists only of "nan" values and a table of data, and there is no code to evaluate. The data provided does not correspond to any specific exercise; therefore, the correctness score is 0%.
+Correctness: 0.0%
+-----
+URL: URL: https://github.com/NivYakir/DI-Bootcamp/blob/main/Week14/Day4/ExercisesXP/Movies(extra).xlsx
+suggestions for improvement:
+- The provided code is a data file containing information about movies.  It's not code intended to solve any of the exercises in the chapter. Thus, it's unrelated to the exercises.
+Correctness: 0%
+-----
+URL: URL: https://github.com/NivYakir/DI-Bootcamp/blob/main/Week14/Day4/ExercisesXP/Movies.xlsx
+suggestions for improvement:
+- The provided code is a large dataset of movie information and does not contain any formulas or pivot tables based on the excercises.
+Correctness: 0%
+-----
+URL: URL: https://github.com/NivYakir/DI-Bootcamp/blob/main/Week14/Day4/ExercisesXP/Single IF Beetle Length.xlsx
+suggestions for improvement:
+- The provided text does not contain code or formulas to evaluate.
+- The text appears to be a sample of data and results, without showing the underlying Excel formulas.
+Correctness: 0.0%
+-----
+URL: URL: https://github.com/NivYakir/DI-Bootcamp/blob/main/Week14/Day4/ExercisesXP/WrongMove.xlsx
+suggestions for improvement:
+- The submission consists primarily of 'nan' values and then a data table. It does not include any code related to text manipulation, logical functions, Pivot Tables, Pivot Charts, or Slicers, as outlined in the chapter content. Therefore, it completely fails to address the exercises.
+Correctness: 0.0%
+-----

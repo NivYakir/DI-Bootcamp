@@ -1,0 +1,13 @@
+URL: https://github.com/NivYakir/DI-Bootcamp/blob/main/Week1/Day1/ExerciseXP/ExercisesXP.py
+suggestions for improvement:
+- Exercise 1: While functionally correct, using multiple print statements or a loop would be more efficient than multiple 
+'Hello World's in one print statement with newline characters.
+- Exercise 3:  The code should be executable, not just the output.  It needs to be Python code that generates the output.
+- Exercise 8: The message 'Wow, you have a repulsive name and you parents should be ashamed!' is extremely rude and inappropriate.  Replace this with a more polite and neutral message.
+- Exercise 9: Add input validation to handle non-numeric input for the height.
+Brief justification:
+- correctness: Most exercises are correctly implemented and directly address the chapter's content.  Exercise 3 is incorrectly presented (needs to be code that generates the output, not just the output). Exercise 8 contains highly inappropriate language.  The rest of the exercises align with the concepts of print statements, variables, mathematical operations, comparison operators, if statements, and user input.
+- readability: The code is generally readable. Variable names are mostly descriptive. However, Exercise 1 could be improved, and the inappropriate message in Exercise 8 lowers the readability score.
+- performance: The code is efficient for the tasks involved. There are no significant performance issues.
+- security: The code has a security risk in Exercise 8 due to the possibility of user input being used in an inappropriate message, and the lack of input validation in Exercise 9 makes it vulnerable to errors and crashes if the user inputs something other than a number.  The other exercises do not have major security concerns.
+

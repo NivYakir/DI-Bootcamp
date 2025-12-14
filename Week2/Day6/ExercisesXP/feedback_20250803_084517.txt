@@ -1,0 +1,25 @@
+URL: URL: https://github.com/NivYakir/DI-Bootcamp/blob/main/Week2/Day6/ExercisesXP/Exercise1.py
+suggestions for improvement:
+- The `get_oldest` function could be improved by using a more concise and efficient method to find the oldest cat, such as using a list and the `max` function with a custom `key`.
+- Add docstrings to the `Cat` class and the `get_oldest` function to explain their purpose and parameters.
+Correctness: 100%
+-----
+URL: URL: https://github.com/NivYakir/DI-Bootcamp/blob/main/Week2/Day6/ExercisesXP/Exercise2.py
+suggestions for improvement:
+- The variable names `taller_dog` and `shorter_dog` could be more descriptive, like `larger_dog` and `smaller_dog` to avoid potential confusion.
+- Consider adding error handling (e.g., try-except blocks) to make the code more robust, particularly if there's a possibility of unexpected inputs in a more extended application of this class.
+Correctness: 100%
+-----
+URL: URL: https://github.com/NivYakir/DI-Bootcamp/blob/main/Week2/Day6/ExercisesXP/Exercise3.py
+suggestions for improvement:
+- The code could be slightly improved by adding docstrings to the class and methods for better readability and understanding.
+- Consider adding error handling (e.g., checking if `lyrics` is a list) to make the code more robust.
+Correctness: 100%
+-----
+URL: URL: https://github.com/NivYakir/DI-Bootcamp/blob/main/Week2/Day6/ExercisesXP/Exercise4.py
+suggestions for improvement:
+- The docstrings could be more comprehensive, especially for the `sort_animals` method, clarifying the algorithm's complexity.
+- Consider using more descriptive variable names. For instance, `temp` in `get_groups` could be renamed to something like `grouped_animals`.
+- The `__init__` method initializes `animals` with a default list. This is generally acceptable but might lead to unexpected behavior if multiple `Zoo` instances share the same list. Consider using `animals = []` instead.
+Correctness: 100%
+-----

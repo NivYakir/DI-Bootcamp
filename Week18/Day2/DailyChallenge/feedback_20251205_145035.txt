@@ -1,0 +1,10 @@
+URL: https://github.com/NivYakir/DI-Bootcamp/blob/main/Week18/Day2/DailyChallenge/adv_sql_challenges.sql
+suggestions for improvement:
+- Consider adding indexes to the tables if performance becomes a concern, especially on frequently joined columns.
+- The code uses explicit medal_id <> 4 to filter out non-medalists. Consider using a more descriptive name for this filtering condition, or creating a view that pre-filters the data for better readability.
+Brief justification:
+- correctness: The code accurately addresses all the tasks outlined in the chapter content. It correctly implements temporary tables and subqueries to perform the required analysis, including medal analysis, region and competitor performance analysis. All the tasks in exercise 1 and exercise 2 is implemented correctly and completely.
+- readability: The code is generally well-formatted and easy to understand. The use of aliases and comments aids readability. However, the code could benefit from more descriptive variable names in certain places.
+- performance: The code's performance seems reasonable, especially given the use of temporary tables and appropriate joins. Indexes could further improve performance on larger datasets.
+- security: The SQL code appears to be secure, with no obvious vulnerabilities like SQL injection. The use of parameterized queries (if applicable in the specific SQL environment) would further enhance security.
+

@@ -1,0 +1,11 @@
+URL: https://github.com/NivYakir/DI-Bootcamp/blob/main/Week2/Day4/DailyChallenge/code.py
+suggestions for improvement:
+- In `sort_string`, the loop to concatenate the sorted words could be replaced with `','.join(sorted_list)` for better readability and efficiency.
+- The `longest_word` function doesn't handle punctuation perfectly; it splits on spaces only.  A more robust solution might use regular expressions to split on word boundaries.
+- Add docstrings to both functions to explain their purpose, parameters, and return values.  This significantly improves readability and maintainability.
+Brief justification:
+- correctness: The code correctly implements the core logic of both challenges as described in the chapter content.  The `sort_string` function accurately takes comma-separated input, sorts it, and returns a comma-separated sorted string. The `longest_word` function mostly works correctly, finding the longest word in the provided examples, although its word splitting is simplistic.  The minor flaws do not significantly detract from the overall correctness, hence a score of 90%.
+- readability: The code is mostly readable, with clear variable names. However, the loop in `sort_string` can be improved for conciseness. The addition of docstrings would significantly enhance readability.  The lack of comprehensive punctuation handling in `longest_word` slightly detracts from readability.
+- performance: The performance is reasonably good for these small examples.  The `','.join()` suggestion would offer a performance improvement for `sort_string`, particularly with larger input strings. The time complexity of both functions is linear, which is efficient for this task.
+- security: There are no obvious security vulnerabilities in this code. It only interacts with user input to receive a string and does not perform any operations that could lead to security issues.
+

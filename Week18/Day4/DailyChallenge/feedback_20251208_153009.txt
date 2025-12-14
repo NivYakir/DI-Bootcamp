@@ -1,0 +1,11 @@
+URL: https://github.com/NivYakir/DI-Bootcamp/blob/main/Week18/Day4/DailyChallenge/window_functions_challenge.sql
+suggestions for improvement:
+- Consider adding comments to explain more complex parts of the queries, particularly in Task 4 where the logic for identifying series is based on keywords.
+- In Task 1, while the query works, using a subquery or CTE to handle the `NULLIF` could improve readability.
+- In Task 4, the assumption that shared keywords define a movie series might not always be accurate. A more robust approach could involve identifying series based on actual series names if such information is available in the dataset.
+Brief justification:
+- correctness: The code directly and accurately addresses each of the four tasks outlined in the chapter content. Task 1 calculates the average budget growth rate, Task 2 identifies the most consistently high-rated actor, Task 3 calculates the rolling average revenue for each genre, and Task 4 identifies the highest-grossing movie series based on keywords. All tasks use window functions as required.
+- readability: The code is generally well-formatted and uses meaningful aliases. However, the complexity of the window functions could benefit from additional comments to explain the logic behind each step.
+- performance: The code appears to be reasonably performant, using appropriate indexing and avoiding unnecessary computations. The window functions are used efficiently to perform the required calculations.
+- security: The code does not appear to have any significant security vulnerabilities. It uses parameterized queries and avoids dynamic SQL injection.
+

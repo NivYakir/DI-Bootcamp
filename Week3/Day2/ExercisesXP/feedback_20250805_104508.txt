@@ -1,0 +1,20 @@
+URL: URL: https://github.com/NivYakir/DI-Bootcamp/blob/main/Week3/Day2/ExercisesXP/Exercise1.py
+suggestions for improvement:
+- Checker failed to provide a response.
+Correctness: N/A%
+-----
+URL: URL: https://github.com/NivYakir/DI-Bootcamp/blob/main/Week3/Day2/ExercisesXP/Exercise2.py
+suggestions for improvement:
+- Checker failed to provide a response.
+Correctness: N/A%
+-----
+URL: URL: https://github.com/NivYakir/DI-Bootcamp/blob/main/Week3/Day2/ExercisesXP/Exercise3.py
+suggestions for improvement:
+- Checker failed to provide a response.
+Correctness: N/A%
+-----
+URL: URL: https://github.com/NivYakir/DI-Bootcamp/blob/main/Week3/Day2/ExercisesXP/Exercise4.py
+suggestions for improvement:
+- Checker failed to provide a response.
+Correctness: N/A%
+-----

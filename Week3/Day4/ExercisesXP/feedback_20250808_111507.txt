@@ -1,0 +1,13 @@
+URL: URL: https://github.com/NivYakir/DI-Bootcamp/blob/main/Week3/Day4/ExercisesXP/code.py
+suggestions for improvement:
+- __repr__ method in the Currency class should return a string representation similar to __str__, not the dictionary.
+- The __add__ method in the Currency class should return a Currency object, not a string.  This is crucial for method chaining.
+- The __iadd__ method should consistently return a Currency object, not sometimes a string. The return type should be consistent.
+- In Exercise 2, create func.py file with adding function.
+Correctness: 90%
+-----
+URL: URL: https://github.com/NivYakir/DI-Bootcamp/blob/main/Week3/Day4/ExercisesXP/func.py
+suggestions for improvement:
+- Skipping file (too many comments or blank lines).
+Correctness: N/A%
+-----

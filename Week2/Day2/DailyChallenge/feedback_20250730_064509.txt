@@ -1,0 +1,15 @@
+URL: https://github.com/NivYakir/DI-Bootcamp/blob/main/Week2/Day2/DailyChallenge/code.py
+suggestions for improvement:
+- The code doesn't correctly handle the transformation of the matrix string into a 2D list. It uses `text.split('
+')` which splits the string into rows, but it doesn't create a 2D list structure.
+- The column iteration logic is convoluted.  A more straightforward approach would be to iterate through columns directly using nested loops.
+- The regular expression for replacing symbols with spaces is efficient but could be made more readable by breaking it into smaller, more manageable expressions.
+- The function names `string_to_2D` and `filter` are not very descriptive of their functionality. More informative names like `create_matrix` and `decode_message` would improve readability.
+- Add comments to explain the logic behind each step of the column iteration and symbol replacement process.
+- Consider error handling for edge cases, such as an empty MATRIX_STR or a matrix with inconsistent row lengths.
+Brief justification:
+- correctness: The code partially solves the problem. It correctly filters alphabetic characters and replaces non-alphabetic sequences with spaces using a regular expression. However, it fails to accurately represent the matrix as a 2D list, leading to an inefficient column-wise iteration that doesn't follow the chapter's instructions. The core logic of column-wise processing and alphabetic character filtering aligns with the chapter but the implementation is flawed.
+- readability: The code's readability is hampered by the convoluted column iteration logic and lack of comments. The use of a single, long regular expression, while efficient, makes it less readable than it could be. More descriptive variable and function names would enhance understanding.
+- performance: The regular expression used for symbol replacement is efficient. The algorithm's time complexity is acceptable for the given input size, although it could be improved by using a more efficient representation of the matrix.
+- security: There are no security concerns in this code. It only processes a static string, so there are no vulnerabilities related to external inputs or data manipulation.
+

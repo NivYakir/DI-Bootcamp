@@ -1,0 +1,10 @@
+URL: https://github.com/NivYakir/DI-Bootcamp/blob/main/Week14/Day6/ExercisesXP/openpyxl.ipynb
+suggestions for improvement:
+- Consider adding comments to explain the purpose of each section of code, particularly in Exercise 3 and 4 where data manipulation and exporting are performed.
+- While using absolute paths works, consider using relative paths or environment variables to make the code more portable.
+Brief justification:
+- correctness: All exercises are completed correctly and address the instructions in the chapter content. Exercise 1 creates the calculator, Exercise 2 finds the plants not in stock, Exercise 3 filters the data and writes it back to Excel, and Exercise 4 groups data, exports it, and creates a sales report.
+- readability: The code is generally well-structured and easy to follow, with good use of comments and variable names. However, more comments in the data manipulation sections (Exercises 3 & 4) would improve readability.
+- performance: The code performs the tasks efficiently, especially the Excel writing and data filtering operations. The use of pandas `ExcelWriter` is appropriate. No major performance bottlenecks are apparent.
+- security: The code does not appear to have any significant security vulnerabilities.  It reads data from local files, which is generally safe, but users should still be cautious about the origin of these files.  No user input is taken, which eliminates common injection risks.
+

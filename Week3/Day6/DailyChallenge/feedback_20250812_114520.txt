@@ -1,0 +1,13 @@
+URL: https://github.com/NivYakir/DI-Bootcamp/blob/main/Week3/Day6/DailyChallenge/code.py
+suggestions for improvement:
+- The `word_frequency` method could return 0 instead of `None` when a word is not found, for better consistency and easier use.
+- The `most_common_word` method could handle cases with multiple words having the same highest frequency; it currently only returns one.
+- Error handling for file operations in `from_file` could be improved (e.g., handling `FileNotFoundError`).
+- Add docstrings to methods for better readability and understanding.
+- Consider using more efficient data structures or algorithms for large text analysis (e.g., `collections.Counter` for word frequency).
+Brief justification:
+- correctness: The code implements all the required classes and methods as specified in the instructions.  `Text` class correctly handles string analysis, the `TextModification` class inherits from `Text` and implements text cleaning methods. The `from_file` class method correctly reads and processes text from a file.  The only minor omissions are the edge cases mentioned in feedback, not fully addressing all scenarios for word frequency and most common word.
+- readability: The code is generally well-structured and easy to follow. However, the lack of docstrings makes it harder to understand the purpose and functionality of each method without careful reading of the code.
+- performance: The current implementation uses simple iterative approaches which might not be optimal for very large text files.  The repeated use of `self.txt_list.count()` within loops is not efficient. Using `collections.Counter` would improve performance significantly.
+- security: The code does not have any obvious security vulnerabilities. The file handling uses appropriate methods and error handling is in place (although it could be improved by explicitly handling exceptions).
+
