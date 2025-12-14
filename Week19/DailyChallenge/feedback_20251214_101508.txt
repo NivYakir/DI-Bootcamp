@@ -1,0 +1,6 @@
+URL: https://github.com/NivYakir/DI-Bootcamp/blob/main/Week19/DailyChallenge/complex_sql_challenge.ipynb
+suggestions for improvement:
+- Consider adding comments to the SQL queries to further enhance readability, especially for complex queries like the Comprehensive Career Metrics.
+- The notebook could benefit from markdown explanations before each query to clarify the objective and the approach taken.
+Correctness: 100%
+-----
